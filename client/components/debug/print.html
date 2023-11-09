@@ -1,0 +1,17 @@
+<template name="print">
+	<span class="js-fireEvent {{class}}">
+		{{> UI.contentBlock}}
+
+		{{> printJSON UI.contentBlock}}
+	</span>
+</template>
+
+<template name="printJSON">
+	<div>
+      <pre>
+        <code>
+			{{printJSON}}
+		</code>
+      </pre>
+	</div>
+</template>

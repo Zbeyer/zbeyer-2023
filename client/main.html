@@ -1,26 +1,33 @@
 <head>
+  {{! fixes the favicon not found error}}
+  <link rel="shortcut icon" href="#">
   <title>zbeyer-2023</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-  <h1>Welcome to ZBeyer!</h1>
-
-  {{! hello}}
-  {{! info}}
+{{> ZbeyerHome}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="ZbeyerHome">
+  <div class="padding_16">
+    <h1>
+      <img src="assets/ZB-Logo.png" alt="logo" class="logo"/>
+      Welcome to ZBeyer!
+    </h1>
+    <p>
+      {{#print}}
+        743
+      {{/print}}
+    </p>
+    {{> ZbeyerLinks}}
+  </div>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+<template name="ZbeyerLinks">
+
+  <ul class="white padding_16">
+    <li><a href="https://github.com/Zbeyer/zbeyer-2023" target="_blank">This Project</a></li>
+    <li><a href="https://github.com/Zbeyer/BearPoke" target="_blank">Don't Poke the Bear</a></li>
   </ul>
 </template>
