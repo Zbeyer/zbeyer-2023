@@ -1,0 +1,70 @@
+<head>
+  <link rel="shortcut icon" href="#">
+  <title>Zbeyer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+{{> ZbeyerHome}}
+</body>
+
+<template name="ZbeyerHome">
+  <div class="padding_16">
+    <h1>
+      {{!--
+        <img src="assets/ZB-Logo.png" alt="logo" class="logo"/>
+      --}}
+      Welcome to ZBeyer!
+      743
+    </h1>
+    <p>
+      {{#print}}
+        743 is a prime number. It is also in the initials ZB. I like it.
+      {{/print}}
+      TBD:
+        <ul>
+          <li>Clock</li>
+          <li>Tic-tac-toe</li>
+          <li>Don't Poke The Bear</li>
+          <li>Blog</li>
+        </ul>
+    </p>
+    {{> ZbeyerLinks}}
+    {{> ZbeyerContact}}
+    {{! game}}
+  </div>
+</template>
+
+<template name="ZbeyerLinks">
+  <div class="padding_16">
+    <h3>Github repositories:</h3>
+
+    <ul class="padding_16">
+      <li><a href="https://github.com/Zbeyer/zbeyer-2023" target="_blank">This Project</a></li>
+      <li><a href="https://github.com/Zbeyer/BearPoke" target="_blank">Don't Poke the Bear</a></li>
+    </ul>
+  </div>
+</template>
+
+<template name="ZbeyerContact">
+  <div class="padding_16">
+    <h3>
+      Contact Information
+    </h3>
+
+    <ul class="padding_16">
+      <li>
+        <span>Phone: </span>
+        (555)&nbsp;555&#8209;5555
+      </li>
+      <li>
+        <span>
+          Email:
+        </span>
+        <a href="mailto:zacharydbeyer@gmail.com">Zacharydbeyer@gmail.com</a>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<template name="game"></template>
