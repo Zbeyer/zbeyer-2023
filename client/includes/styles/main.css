@@ -41,17 +41,17 @@ header
 footer {
 	color: var(--mainBG);
 	background-color: var(--mainQuaternary);
+	position: relative;
+
 	display: flex;
-
-	align-items: flex-start;
-	justify-content: center;
 	flex-flow: row wrap;
-	flex-direction: row;
-	/*flex-wrap: wrap;*/
-
+	justify-content: center;
+}
+footer div {
 	max-width: 320px;
 	width: 100%;
 	min-width: 280px;
+	padding: 16px;
 }
 
 footer a {

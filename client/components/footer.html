@@ -1,45 +1,23 @@
 <template name="zbeyerFooter">
-	<footer class="">
-		<div>
-			{{> zbeyerNav}}
-		</div>
+	<footer>
+		{{> ZbeyerLinks}}
+		{{> ZbeyerContact}}
 	</footer>
 </template>
 
-<template name="zbeyerNav">
-	<nav>
-		<div class="padding_16">
-			{{> ZbeyerLinks}}
-			{{> ZbeyerContact}}
-		</div>
-	</nav>
-</template>
-
 <template name="ZbeyerLinks">
-	<div class="padding_16">
+	<div>
 		<h4>Github repositories:</h4>
-		<div class="padding_16">
-			<a href="https://github.com/Zbeyer/zbeyer-2023" target="_blank">This Project</a>
-			<a href="https://github.com/Zbeyer/BearPoke" target="_blank">Don't Poke the Bear</a>
-			<a href="https://github.com/Zbeyer/node" target="_blank">Node</a>
-		</div>
+		<a href="https://github.com/Zbeyer/zbeyer-2023" target="_blank">This Project</a>
+		<a href="https://github.com/Zbeyer/BearPoke" target="_blank">Don't Poke the Bear</a>
+		<a href="https://github.com/Zbeyer/node" target="_blank">Node</a>
 	</div>
 </template>
 
 <template name="ZbeyerContact">
-	<div class="padding_16">
-		<h4>
-			Contact Information
-		</h4>
-		<div class="padding_16">
-			<span>Phone: </span>
-			<a href="tel:5555555555">
-				(555)&nbsp;555&#8209;5555
-			</a>
-			<span>
-          Email:
-        </span>
-			<a href="mailto:zacharydbeyer@gmail.com">Zacharydbeyer@gmail.com</a>
-		</div>
+	<div>
+		<h4>Contact Information</h4>
+		<a href="tel:5555555555"><span>Phone: </span> (555)&nbsp;555&#8209;5555</a>
+		<a href="mailto:zacharydbeyer@gmail.com"><span> Email: </span>Zacharydbeyer@gmail.com</a>
 	</div>
 </template>

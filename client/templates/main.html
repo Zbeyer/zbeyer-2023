@@ -7,8 +7,11 @@
 <body>
 {{> zbeyerHeader}}
 {{# zbeyerBody}}
-	Content goes here
+	{{#if showGame}}
+		{{> game}}
+	{{else}}
+		Content goes here
+	{{/if}}
 {{/ zbeyerBody}}
 {{> zbeyerFooter}}
 </body>
-<template name="game"></template>
