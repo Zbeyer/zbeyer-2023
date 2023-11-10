@@ -5,78 +5,10 @@
 </head>
 
 <body>
-{{> ZbeyerHome}}
+{{> zbeyerHeader}}
+{{# zbeyerBody}}
+	Content goes here
+{{/ zbeyerBody}}
+{{> zbeyerFooter}}
 </body>
-
-<template name="ZbeyerHome">
-	<div class="padding_16">
-		<h1>
-			{{!--
-			  <img src="assets/ZB-Logo.png" alt="logo" class="logo"/>
-			--}}
-			Welcome to ZBeyer!
-			743
-		</h1>
-		<p>
-			{{#print}}
-				743 is a prime number. It is also in the initials ZB. I like it.
-			{{/print}}
-			TBD:
-		<ul>
-			<li>Clock</li>
-			<li>Tic-tac-toe</li>
-			<li>Don't Poke The Bear</li>
-			<li>Blog</li>
-		</ul>
-		</p>
-		Passes AAA level for any size text and AA for user interface components and graphical objects
-	</div>
-	{{> zbeyerNav}}
-</template>
-
-<template name="ZbeyerLinks">
-	<div class="padding_16">
-		<h4>Github repositories:</h4>
-
-		<ul class="padding_16">
-			<li><a href="https://github.com/Zbeyer/zbeyer-2023" target="_blank">This Project</a></li>
-			<li><a href="https://github.com/Zbeyer/BearPoke" target="_blank">Don't Poke the Bear</a></li>
-			<li><a href="https://github.com/Zbeyer/node" target="_blank">Node</a></li>
-		</ul>
-	</div>
-</template>
-
-<template name="zbeyerNav">
-	<nav>
-		<div class="padding_16">
-			{{> ZbeyerLinks}}
-			{{> ZbeyerContact}}
-			testing Nav...
-		</div>
-	</nav>
-</template>
-
-<template name="ZbeyerContact">
-	<div class="padding_16">
-		<h4>
-			Contact Information
-		</h4>
-
-		<ul class="padding_16">
-			<li>
-				<span>Phone: </span>
-				<a href="tel:5555555555">
-					(555)&nbsp;555&#8209;5555
-				</a>
-			</li>
-			<li>
-        <span>
-          Email:
-        </span>
-				<a href="mailto:zacharydbeyer@gmail.com">Zacharydbeyer@gmail.com</a>
-			</li>
-		</ul>
-	</div>
-</template>
-
 <template name="game"></template>

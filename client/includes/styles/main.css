@@ -1,42 +1,70 @@
 :root {
-  --mainBG: #000000;
-  --mainFG: #FFFFFF;
-  --mainSecondary: #FF9900;
-  --mainTertiary: #FFCC00;
+	--mainBG: #FFFFFF;
+	--mainFG: #002742;
+	--mainSecondary: #FF9900;
+	--mainTertiary: #FFCC00;
+	--mainQuaternary: #001321;
 }
 
 body {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 
-  font-family: sans-serif;
-  font-size: 1em;
+	font-family: sans-serif;
+	font-size: 1em;
 
-  line-height: 1.5em;
-  color: var(--mainFG);
-  background-color: var(--mainBG);
+	line-height: 1.5em;
+	color: var(--mainFG);
+	background-color: var(--mainBG);
 }
 
-a,a:visited {
-  color: var(--mainSecondary);
+.no-decoration {
+	text-decoration: unset;
+	color: unset;
+	background-color: unset;
 }
+
+a, a:visited {
+	color: var(--mainSecondary);
+}
+
 a:hover {
-  color: var(--mainTertiary);
+	color: var(--mainTertiary);
 }
 
-nav {
-  background-color: #002742
-}
-
-.padding_16
+header
 {
-  padding: 16px;
+	background-color: var(--mainFG);
+	color: var(--mainBG);
 }
 
-.logo
-{
-  display: inline-block;
-  height: 32px;
-  width: auto;
+footer {
+	color: var(--mainBG);
+	background-color: var(--mainQuaternary);
+	display: flex;
+
+	align-items: flex-start;
+	justify-content: center;
+	flex-flow: row wrap;
+	flex-direction: row;
+	/*flex-wrap: wrap;*/
+
+	max-width: 320px;
+	width: 100%;
+	min-width: 280px;
+}
+
+footer a {
+	display: block;
+}
+
+.padding_16 {
+	padding: 16px;
+}
+
+.logo {
+	display: inline-block;
+	height: 32px;
+	width: auto;
 
 }
