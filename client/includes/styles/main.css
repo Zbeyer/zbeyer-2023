@@ -24,6 +24,10 @@ a:hover {
   color: var(--mainTertiary);
 }
 
+nav {
+  background-color: #002742
+}
+
 .padding_16
 {
   padding: 16px;
