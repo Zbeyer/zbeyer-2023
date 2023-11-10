@@ -1,11 +1,8 @@
 import 'phaser';
 // import config from './Config/config';
 import GameScene from './Scenes/GameScene';
-
+let game = null;
 Template.game.onCreated( () => {
-
-	console.log('game created');
-
 	let config = {
 		title: 'Zbeyer',
 		type: Phaser.WEBGL,
@@ -31,5 +28,6 @@ Template.game.onCreated( () => {
 			disableWebAudio: false,
 		}
 	};
-	let game = new Phaser.Game(config);
+	// game = game || new Phaser.Game(config);
+	console.log("game: %o", game);
 });

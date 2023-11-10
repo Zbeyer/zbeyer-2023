@@ -1,7 +1,15 @@
-<template name="zbeyerBody">
-	<div class="content">
-		<div class="padding_16">
+<template name="mainBody">
+	<div class="content padding_16">
+		{{#if showGame}}
+			{{> game}}
+			<button class="hideGameButton">
+				hide Game
+			</button>
+		{{else}}
 			{{> UI.contentBlock}}
-		</div>
+			<button class="showGameButton">
+				Show Game
+			</button>
+		{{/if}}
 	</div>
 </template>

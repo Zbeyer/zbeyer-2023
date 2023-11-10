@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 require("phaser");
+var game = null;
 Template.game.onCreated(function () {
-    console.log('game created');
     var config = {
         title: 'Zbeyer',
         type: Phaser.WEBGL,
@@ -28,5 +28,6 @@ Template.game.onCreated(function () {
             disableWebAudio: false,
         }
     };
-    var game = new Phaser.Game(config);
+    // game = game || new Phaser.Game(config);
+    console.log("game: %o", game);
 });
