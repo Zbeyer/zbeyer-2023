@@ -31,7 +31,7 @@ Template.mainBody.onCreated(function helloOnCreated() {
 	// this.colorKeys = new ReactiveVar(['grey', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']);
 	let docs = [
 		// {path: 'docs/colors.json', title: 'Colors JSON'},
-		{path: 'docs/colors.md', title: 'Colors'},
+		{path: 'docs/colors.html', title: 'Colors'},
 		{path: 'docs/helloWorld.html', title: 'Hello World'},
 	];
 	this.docs = new ReactiveVar(docs);
