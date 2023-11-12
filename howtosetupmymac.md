@@ -12,7 +12,8 @@ Get homebrew running straight away so you can use commands like
 brew install exa
 ```
 
-wich is similar to `ls` but gives custom colrs÷÷ to files and derectories colors:
+wich is similar to `ls` but gives custom colors to files and derectories colors:
+
 ![Screenshot 2023-11-11 at 5.13.57 PM](./public/assets/Screenshot%202023-11-11%20at%205.13.57%20PM.jpg)
 
 ## `cowsay`
@@ -26,7 +27,7 @@ brew install cowsay
 e.g.
 
 ```bash
- exa | cowsay
+exa | cowsay
 ```
 
 will print out:
