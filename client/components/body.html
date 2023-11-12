@@ -1,10 +1,17 @@
 <template name="mainBody">
 	<div class="content padding_16">
 		{{#if activeDoc}}
-			{{activeDoc.body}}
+			<h1>{{activeDoc.title}}</h1>
+				<section>
+					{{{activeDoc.body}}}
+				</section>
+				<p>
+					<i>{{activeDoc.path}}</i>
+				</p>
+			<hr>
 		{{/if}}
 		{{#each docs}}
-			<div class="js-readMore" data-path="{{path}}">
+			<div class="js-readMore" data-title="{{title}}" data-path="{{path}}">
 				<h4>{{title}}</h4>
 				<p>
 					<i>{{path}}</i>

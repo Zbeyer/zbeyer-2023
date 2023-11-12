@@ -18,15 +18,6 @@ let addDocumentToSession = function (fileName: string) {
 	});
 	return doc;
 }
-let colors = function () {
-	let doc = Session.get('document_colors');
-	if (!doc) {
-		doc = 'Hello World';
-		const fileName: string = 'docs/colors.json';
-		addDocumentToSession(fileName);
-	}
-	return doc;
-}
 
 Template.mainBody.onCreated(function helloOnCreated() {
 	this.showGame = new ReactiveVar(false);
@@ -34,8 +25,8 @@ Template.mainBody.onCreated(function helloOnCreated() {
 	// this.colors = new ReactiveVar(colors());
 	// this.colorKeys = new ReactiveVar(['grey', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']);
 	let docs = [
-		{path: 'docs/colors.json', title: 'Colors JSON'},
-		{path: 'docs/colors.md', title: 'Colors'}
+		// {path: 'docs/colors.json', title: 'Colors JSON'},
+		// {path: 'docs/colors.md', title: 'Colors'}
 	];
 	this.docs = new ReactiveVar(docs);
 	this.activeDoc = new ReactiveVar(null);
@@ -89,7 +80,15 @@ Template.mainBody.events({
 		instance.zbeyerStep.set(step);
 	},
 	'click .js-readMore': function (event, instance) {
-		let path=event.currentTarget.getAttribute("data-path")
-		console.log("readMore clicked\n\t%o\n\t%o",event, instance);
+		let path=event.currentTarget.getAttribute("data-path");
+		let title=event.currentTarget.getAttribute("data-title");
+		let document: DocumentInterface = {
+			title: title,
+			path: path,
+			body: addDocumentToSession(path)
+		}
+
+		instance.activeDoc.set(document);
+		console.log("readMore clicked\n\t%o\n\t%o\n\t%o",event, instance, document);
 	}
 });
