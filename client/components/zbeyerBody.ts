@@ -6,6 +6,7 @@ import {Session} from 'meteor/session';
 interface DocumentInterface {
 	title: string;
 	path: string;
+	type?: string;
 	body?: string;
 }
 
@@ -18,10 +19,22 @@ let addDocumentToSession = function (fileName: string) {
 		// doc = doc.replace(/\n/g, '<br/>');
 
 		Session.set(docName, doc);
-		console.log("addDocumentToSession\n\t%o\n\t%o", fileName, doc);
-
 	});
 	return doc;
+}
+
+let animateScrollingToTop = function () {
+	const loop = 16;
+	let runScrollAnimation = setInterval(function () {
+		let scrollTo = scrollY - 64.0;
+		if(scrollTo < 0) { scrollTo = 0; }
+		if (scrollTo <= 0) {
+			clearInterval(runScrollAnimation);
+		} else {
+			window.scrollTo(0, scrollTo);
+		}
+	}, loop);
+
 }
 
 Template.mainBody.onCreated(function helloOnCreated() {
@@ -31,13 +44,20 @@ Template.mainBody.onCreated(function helloOnCreated() {
 	// this.colorKeys = new ReactiveVar(['grey', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']);
 	let docs = [
 		// {path: 'docs/colors.json', title: 'Colors JSON'},
-		{path: 'docs/colors.html', title: 'Colors'},
-		{path: 'docs/helloWorld.html', title: 'Hello World'},
+		{
+			path: 'docs/colors.html',
+			title: 'Colors',
+			type: 'html'
+		},
+		{ path: 'docs/helloWorld.html', title: 'Hello World'},
 	];
 	this.docs = new ReactiveVar(docs);
 	this.activeDoc = new ReactiveVar(null);
 	docs.forEach(function (doc: DocumentInterface) {
 		let path = doc.path || '';
+		if (!doc.type) {
+			doc.type = doc.path.split('.').pop();
+		}
 		doc.body = addDocumentToSession(path) || '';
 	});
 });
@@ -50,9 +70,6 @@ Template.mainBody.helpers({
 	showGame() {
 		return Template.instance().showGame.get();
 	},
-	// stepper() {
-	// 	return Template.instance().zbeyerStep.get();
-	// },
 	docs() {
 		return Template.instance().docs.get();
 	},
@@ -86,15 +103,15 @@ Template.mainBody.events({
 		instance.zbeyerStep.set(step);
 	},
 	'click .js-readMore': function (event, instance) {
-		let path=event.currentTarget.getAttribute("data-path");
-		let title=event.currentTarget.getAttribute("data-title");
+		let path = event.currentTarget.getAttribute("data-path");
+		let title = event.currentTarget.getAttribute("data-title");
+		let type = event.currentTarget.getAttribute("data-type");
 		let document: DocumentInterface = {
 			title: title,
 			path: path,
 			body: addDocumentToSession(path)
 		}
-
+		animateScrollingToTop();
 		instance.activeDoc.set(document);
-		// console.log("readMore clicked\n\t%o\n\t%o\n\t%o",event, instance, document);
 	}
 });
