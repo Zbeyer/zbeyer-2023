@@ -21,7 +21,7 @@ let addDocumentToSession = function (fileName: string) {
 		Session.set(docName, doc);
 	});
 	return doc;
-}
+};
 
 let animateScrollingToTop = function () {
 	const loop = 16;
@@ -34,23 +34,37 @@ let animateScrollingToTop = function () {
 			window.scrollTo(0, scrollTo);
 		}
 	}, loop);
+};
 
-}
+const doNotRenderDocumentTypes = ['pdf','js', 'ts', 'md', 'json', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico']
+const doNotRenderCodeForDocumentTypes = ['pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
+const renderImageTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
+const docs = [
+	// {path: 'docs/colors.json', title: 'Colors JSON'},
+	{
+		path: 'docs/colors.html',
+		title: 'Colors',
+		type: 'html'
+	},
+	{ path: 'docs/helloWorld.html', title: 'Hello World'},
+	{ path: 'docs/colorList.pdf', title: 'PDF File'},
+	{ path: 'bear.png', title: 'Bear Image'},
+];
+
+let isDocumentTypeInList = function(type: string, list: string[]) {
+	return list.indexOf(type) >= 0;
+};
+
+let documentType = function (doc: DocumentInterface) {
+	return doc.path.split('.').pop();
+};
 
 Template.mainBody.onCreated(function helloOnCreated() {
 	this.showGame = new ReactiveVar(false);
 	this.zbeyerStep = new ReactiveVar(0);
 	// this.colors = new ReactiveVar(colors());
 	// this.colorKeys = new ReactiveVar(['grey', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']);
-	let docs = [
-		// {path: 'docs/colors.json', title: 'Colors JSON'},
-		{
-			path: 'docs/colors.html',
-			title: 'Colors',
-			type: 'html'
-		},
-		{ path: 'docs/helloWorld.html', title: 'Hello World'},
-	];
+
 	this.docs = new ReactiveVar(docs);
 	this.activeDoc = new ReactiveVar(null);
 	docs.forEach(function (doc: DocumentInterface) {
@@ -75,6 +89,29 @@ Template.mainBody.helpers({
 	},
 	activeDoc() {
 		return Template.instance().activeDoc.get();
+	},
+	shouldNotRenderDoc() {
+		let doc = Template.instance().activeDoc.get();
+		if (!doc) { return true; }
+
+		let type = doc.type || documentType(doc);
+		return isDocumentTypeInList(type, doNotRenderDocumentTypes);
+	},
+	shouldNotRenderCode() {
+		let doc = Template.instance().activeDoc.get();
+		if (!doc) { return true; }
+
+		let type = doc.type || documentType(doc);
+		return isDocumentTypeInList(type, doNotRenderCodeForDocumentTypes);
+	},
+	shouldRenderImage() {
+		let doc = Template.instance().activeDoc.get();
+		if (!doc) { return false; }
+
+		console.log("shouldRenderImage\t", doc);
+
+		let type = doc.type || documentType(doc);
+		return isDocumentTypeInList(type, renderImageTypes);
 	}
 });
 

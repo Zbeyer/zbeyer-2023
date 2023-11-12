@@ -3,15 +3,31 @@
 		{{#if activeDoc}}
 			<h1>{{activeDoc.title}}</h1>
 
-			<section>
-				{{{activeDoc.body}}}
-			</section>
-			<br/>
-			<section>
-				<pre><code>{{activeDoc.body}}</code></pre>
-			</section>
+			{{#unless shouldNotRenderDoc}}
+				<section>
+					{{{activeDoc.body}}}
+				</section>
+				<br/>
+			{{/unless}}
+
+			{{#unless shouldNotRenderCode}}
+				<section>
+					<pre><code>{{activeDoc.body}}</code></pre>
+				</section>
+			{{/unless}}
+
+			{{#if shouldRenderImage}}
+				<div style="padding: inherit; background: white">
+					<img src="./{{activeDoc.path}}" alt="{{activeDoc.alt}}">
+				</div>
+				<br/>
+				<div style="padding: inherit; background: black">
+					<img src="./{{activeDoc.path}}" alt="{{activeDoc.alt}}">
+				</div>
+				<a href="./{{activeDoc.path}}" target="_blank">View Full Size</a>
+			{{/if}}
 			<p>
-				<i>{{activeDoc.path}}</i>
+				<a href="./{{activeDoc.path}}" target="_blank">{{activeDoc.path}}</a>
 			</p>
 			<hr>
 		{{/if}}
