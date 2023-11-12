@@ -6,6 +6,11 @@ Homebrew belongs on every Mac. If you're not running homebrew we can still be fr
 
 https://brew.sh/
 
+```bash
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 Get homebrew running straight away so you can use commands like 
 
 ```bash 
