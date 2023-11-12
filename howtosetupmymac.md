@@ -45,6 +45,28 @@ will print out:
                 ||     ||
 ```
 
+```bash
+cd ~/
+pwd | cowsay # another example
+ _____________________ 
+< /Users/zacharybeyer >
+ --------------------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
+
+More silliness
+
+```bash
+brew install lolcat
+brew install dark-mode
+```
+
+----
+
 ## `ohmyzsh`
 
 Get  Oh My Z-shell installed. Seriously it's a game changer.
@@ -56,11 +78,29 @@ Get  Oh My Z-shell installed. Seriously it's a game changer.
 sh -c "$(curl fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+----
+
 ## [Powerlevel10k](https://github.com/romkatv/powerlevel10k#powerlevel10k)
+
+Very customizable but just run the commands in the readme.
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+
+Then
+
+```bash
+p10k configure # Not required, just nice.
+```
+
+
 
 https://github.com/romkatv/powerlevel10k#installation
 
 
+----
 
 ## Command-line Fuzzy Finder
 
