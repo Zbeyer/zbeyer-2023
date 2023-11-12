@@ -1,48 +1,95 @@
 // import { Meteor } from 'meteor/meteor';
 import {Template} from 'meteor/templating';
 import {ReactiveVar} from 'meteor/reactive-var';
+import {Session} from 'meteor/session';
 
-// let lastRun = 0;
+interface DocumentInterface {
+	title: string;
+	path: string;
+	body?: string;
+}
+
+let addDocumentToSession = function (fileName: string) {
+	let docName = 'document_' + fileName;
+	let doc = Session.get(docName);
+	fetch(fileName).then((resp) => resp.text()).then(function (data) {
+		doc = data;
+		Session.set(docName, doc);
+	});
+	return doc;
+}
+let colors = function () {
+	let doc = Session.get('document_colors');
+	if (!doc) {
+		doc = 'Hello World';
+		const fileName: string = 'docs/colors.json';
+		addDocumentToSession(fileName);
+	}
+	return doc;
+}
 
 Template.mainBody.onCreated(function helloOnCreated() {
 	this.showGame = new ReactiveVar(false);
 	this.zbeyerStep = new ReactiveVar(0);
+	// this.colors = new ReactiveVar(colors());
+	// this.colorKeys = new ReactiveVar(['grey', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']);
+	let docs = [
+		{path: 'docs/colors.json', title: 'Colors JSON'},
+		{path: 'docs/colors.md', title: 'Colors'}
+	];
+	this.docs = new ReactiveVar(docs);
+	this.activeDoc = new ReactiveVar(null);
+	docs.forEach(function (doc: DocumentInterface) {
+		let path = doc.path || '';
+		doc.body = addDocumentToSession(path) || '';
+	});
+});
+
+Template.mainBody.onRendered(function () {
+	console.log("mainBody rendered");
 });
 
 Template.mainBody.helpers({
-	showGame() { return Template.instance().showGame.get(); },
-	stepper() { return Template.instance().zbeyerStep.get(); },
+	showGame() {
+		return Template.instance().showGame.get();
+	},
+	// stepper() {
+	// 	return Template.instance().zbeyerStep.get();
+	// },
+	docs() {
+		return Template.instance().docs.get();
+	},
+	activeDoc() {
+		return Template.instance().activeDoc.get();
+	}
 });
 
 Template.mainBody.events({
 	'click button': function (event, instance) {
 		console.log("button clicked");
 	},
-	'click button.showGameButton': function(event, instance) {
-		// let now = (new Date).getTime();
-		// let delta = now - lastRun;
-		// if (delta && (delta < 1000)) {
-		//   console.log("showGameButton clicked but terminated early: \n\t%o", delta);
-		//   return;
-		// }
-		//
-		// lastRun = now;
-		// console.log("showGameButton clicked: \n\t%o", delta);
+	'click button.showGameButton': function (event, instance) {
 		instance.showGame.set(true);
 	},
-	'click button.hideGameButton': function(event, instance) {
+	'click button.hideGameButton': function (event, instance) {
 		instance.showGame.set(false);
 	},
-	'click button.reduceStep': function(event, instance) {
+	'click button.reduceStep': function (event, instance) {
 		let step = instance.zbeyerStep.get();
 		step--;
 		Math.max(step, 0);
 		instance.zbeyerStep.set(step);
 	},
-	'click button.increaseStep': function(event, instance) {
+	'click button.increaseStep': function (event, instance) {
 		let step = instance.zbeyerStep.get();
 		step++;
-		Math.min(step, 3);
+		if (step > 3) {
+			step = 3;
+		}
 		instance.zbeyerStep.set(step);
 	},
+	'click .js-readMore': function (event, instance) {
+		let path=event.currentTarget.getAttribute("data-path")
+		console.log("readMore clicked\n\t%o\n\t%o",event, instance);
+	}
 });

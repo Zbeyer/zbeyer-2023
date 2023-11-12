@@ -1,29 +1,16 @@
 <template name="mainBody">
 	<div class="content padding_16">
-		{{#if showGame}}
-			{{> game}}
-			<button class="hideGameButton">
-				hide Game
-			</button>
-		{{else}}
-
-			<button class="reduceStep">
-				PREV
-			</button>
-			{{stepper}}
-			<button class="increaseStep">
-				NEXT
-			</button>
-			{{#if stepper}}
-				{{# stepper step=stepper}}
-					{{> UI.contentBlock}}
-				{{/ stepper}}
-
-			{{else}}
-				<button class="showGameButton">
-					Show Game
-				</button>
-			{{/if}}
+		{{#if activeDoc}}
+			{{activeDoc.body}}
 		{{/if}}
+		{{#each docs}}
+			<div class="js-readMore" data-path="{{path}}">
+				<h4>{{title}}</h4>
+				<p>
+					<i>{{path}}</i>
+				</p>
+			</div>
+		{{/each}}
+
 	</div>
 </template>
