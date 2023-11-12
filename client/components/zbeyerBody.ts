@@ -6,12 +6,12 @@ import {ReactiveVar} from 'meteor/reactive-var';
 
 Template.mainBody.onCreated(function helloOnCreated() {
 	this.showGame = new ReactiveVar(false);
+	this.zbeyerStep = new ReactiveVar(0);
 });
 
 Template.mainBody.helpers({
-	showGame() {
-		return Template.instance().showGame.get();
-	},
+	showGame() { return Template.instance().showGame.get(); },
+	stepper() { return Template.instance().zbeyerStep.get(); },
 });
 
 Template.mainBody.events({
@@ -32,5 +32,17 @@ Template.mainBody.events({
 	},
 	'click button.hideGameButton': function(event, instance) {
 		instance.showGame.set(false);
-	}
+	},
+	'click button.reduceStep': function(event, instance) {
+		let step = instance.zbeyerStep.get();
+		step--;
+		Math.max(step, 0);
+		instance.zbeyerStep.set(step);
+	},
+	'click button.increaseStep': function(event, instance) {
+		let step = instance.zbeyerStep.get();
+		step++;
+		Math.min(step, 3);
+		instance.zbeyerStep.set(step);
+	},
 });

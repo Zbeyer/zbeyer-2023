@@ -6,10 +6,24 @@
 				hide Game
 			</button>
 		{{else}}
-			{{> UI.contentBlock}}
-			<button class="showGameButton">
-				Show Game
+
+			<button class="reduceStep">
+				PREV
 			</button>
+			{{stepper}}
+			<button class="increaseStep">
+				NEXT
+			</button>
+			{{#if stepper}}
+				{{# stepper step=stepper}}
+					{{> UI.contentBlock}}
+				{{/ stepper}}
+
+			{{else}}
+				<button class="showGameButton">
+					Show Game
+				</button>
+			{{/if}}
 		{{/if}}
 	</div>
 </template>
