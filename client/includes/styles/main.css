@@ -18,6 +18,14 @@ body {
 	background-color: var(--mainBG);
 }
 
+.content section {
+	color: black;
+	background-color: #E0E0E0;
+	border-radius: 8px;
+	border: 1px solid #C0C0C0;
+	padding: 1em;
+}
+
 .no-decoration {
 	text-decoration: unset;
 	color: unset;

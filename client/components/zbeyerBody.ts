@@ -12,9 +12,14 @@ interface DocumentInterface {
 let addDocumentToSession = function (fileName: string) {
 	let docName = 'document_' + fileName;
 	let doc = Session.get(docName);
+
 	fetch(fileName).then((resp) => resp.text()).then(function (data) {
 		doc = data;
+		// doc = doc.replace(/\n/g, '<br/>');
+
 		Session.set(docName, doc);
+		console.log("addDocumentToSession\n\t%o\n\t%o", fileName, doc);
+
 	});
 	return doc;
 }
@@ -26,7 +31,8 @@ Template.mainBody.onCreated(function helloOnCreated() {
 	// this.colorKeys = new ReactiveVar(['grey', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']);
 	let docs = [
 		// {path: 'docs/colors.json', title: 'Colors JSON'},
-		// {path: 'docs/colors.md', title: 'Colors'}
+		{path: 'docs/colors.md', title: 'Colors'},
+		{path: 'docs/helloWorld.html', title: 'Hello World'},
 	];
 	this.docs = new ReactiveVar(docs);
 	this.activeDoc = new ReactiveVar(null);
@@ -89,6 +95,6 @@ Template.mainBody.events({
 		}
 
 		instance.activeDoc.set(document);
-		console.log("readMore clicked\n\t%o\n\t%o\n\t%o",event, instance, document);
+		// console.log("readMore clicked\n\t%o\n\t%o\n\t%o",event, instance, document);
 	}
 });

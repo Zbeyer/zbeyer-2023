@@ -2,12 +2,17 @@
 	<div class="content padding_16">
 		{{#if activeDoc}}
 			<h1>{{activeDoc.title}}</h1>
-				<section>
-					{{{activeDoc.body}}}
-				</section>
-				<p>
-					<i>{{activeDoc.path}}</i>
-				</p>
+
+			<section>
+				{{{activeDoc.body}}}
+			</section>
+			<br/>
+			<section>
+				<pre><code>{{activeDoc.body}}</code></pre>
+			</section>
+			<p>
+				<i>{{activeDoc.path}}</i>
+			</p>
 			<hr>
 		{{/if}}
 		{{#each docs}}
