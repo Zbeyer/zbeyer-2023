@@ -36,8 +36,8 @@ let animateScrollingToTop = function () {
 	}, loop);
 };
 
-const doNotRenderDocumentTypes = ['pdf','js', 'ts', 'md', 'json', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico']
-const doNotRenderCodeForDocumentTypes = ['pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
+const doNotRenderDocumentTypes = ['pdf', 'doc', 'docx', 'js', 'ts', 'md', 'json', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico']
+const doNotRenderCodeForDocumentTypes = ['doc', 'docx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const renderImageTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const docs = [
 	// {path: 'docs/colors.json', title: 'Colors JSON'},
@@ -46,8 +46,9 @@ const docs = [
 		title: 'Colors',
 		type: 'html'
 	},
-	{ path: 'docs/helloWorld.html', title: 'Hello World'},
-	{ path: 'docs/colorList.pdf', title: 'PDF File'},
+	{ path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
+	// { path: 'docs/helloWorld.html', title: 'Hello World'},
+	{ path: 'colorList.pdf', title: 'PDF File'},
 	{ path: 'bear.png', title: 'Bear Image'},
 ];
 
