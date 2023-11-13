@@ -37,7 +37,7 @@ let animateScrollingToTop = function () {
 };
 
 const doNotRenderDocumentTypes = ['pdf', 'doc', 'docx', 'js', 'ts', 'json', 'md', 'json', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico']
-const doNotRenderCodeForDocumentTypes = ['doc', 'docx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
+const doNotRenderCodeForDocumentTypes = ['md', 'doc', 'docx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const renderImageTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const docs = [
 	// {path: 'docs/colors.json', title: 'Colors JSON'},
@@ -46,11 +46,12 @@ const docs = [
 		title: 'Colors',
 		type: 'html'
 	},
+	{ path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
 	{ path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
 	{ path: 'docs/resume.md', title: 'Modern Resume'},
 	// { path: 'docs/helloWorld.html', title: 'Hello World'},
 	{ path: 'colorList.pdf', title: 'PDF File'},
-	{ path: 'bear.png', title: 'Bear Image'},
+	{ path: 'bear.png', title: 'Bear Image'}
 ];
 
 let isDocumentTypeInList = function(type: string, list: string[]) {
@@ -115,6 +116,13 @@ Template.mainBody.helpers({
 		let type = doc.type || documentType(doc);
 		type = type.toLowerCase();
 		return isDocumentTypeInList(type, renderImageTypes);
+	},
+	isActiveDocMarkdown() {
+		let doc = Template.instance().activeDoc.get();
+		if (!doc) { return false; }
+		let type = doc.type || documentType(doc);
+		type = type.toLowerCase();
+		return type == 'md';
 	}
 });
 

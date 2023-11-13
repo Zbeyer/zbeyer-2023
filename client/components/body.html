@@ -1,8 +1,13 @@
 <template name="mainBody">
 	<div class="content padding_16">
-		{{stripHTML '# Foo <div>bar</div>'}}
-
 		{{#if activeDoc}}
+			{{#if isActiveDocMarkdown}}
+				<hr>
+				<section>
+					{{#markdown}}{{activeDoc.body}}{{/markdown}}
+				</section>
+				<hr>
+			{{/if}}
 			<h1>{{activeDoc.title}}</h1>
 
 			{{#unless shouldNotRenderDoc}}

@@ -18,9 +18,13 @@ body {
 	background-color: var(--mainBG);
 }
 
+.content {
+	color: unset;
+}
+
 .content section {
 	color: black;
-	background-color: #E0E0E0;
+	background-color: hsl(1, 0%, 97%);
 	border-radius: 8px;
 	border: 1px solid #C0C0C0;
 	padding: 1em;
