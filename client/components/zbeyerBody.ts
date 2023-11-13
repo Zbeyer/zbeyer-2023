@@ -36,7 +36,7 @@ let animateScrollingToTop = function () {
 	}, loop);
 };
 
-const doNotRenderDocumentTypes = ['pdf', 'doc', 'docx', 'js', 'ts', 'md', 'json', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico']
+const doNotRenderDocumentTypes = ['pdf', 'doc', 'docx', 'js', 'ts', 'json', 'md', 'json', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico']
 const doNotRenderCodeForDocumentTypes = ['doc', 'docx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const renderImageTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const docs = [
@@ -97,6 +97,7 @@ Template.mainBody.helpers({
 		if (!doc) { return true; }
 
 		let type = doc.type || documentType(doc);
+		type = type.toLowerCase();
 		return isDocumentTypeInList(type, doNotRenderDocumentTypes);
 	},
 	shouldNotRenderCode() {
@@ -104,15 +105,15 @@ Template.mainBody.helpers({
 		if (!doc) { return true; }
 
 		let type = doc.type || documentType(doc);
+		type = type.toLowerCase();
 		return isDocumentTypeInList(type, doNotRenderCodeForDocumentTypes);
 	},
 	shouldRenderImage() {
 		let doc = Template.instance().activeDoc.get();
 		if (!doc) { return false; }
 
-		console.log("shouldRenderImage\t", doc);
-
 		let type = doc.type || documentType(doc);
+		type = type.toLowerCase();
 		return isDocumentTypeInList(type, renderImageTypes);
 	}
 });

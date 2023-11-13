@@ -1,6 +1,7 @@
 <template name="zbeyerFooter">
 	<footer>
 		<div>{{> ZbeyerLinks}}</div>
+		<div>{{> ZbeyerSocial}}</div>
 		<div>{{> ZbeyerContact}}</div>
 		<div>{{> usefulLinks}}</div>
 	</footer>
@@ -9,28 +10,33 @@
 <template name="ZbeyerLinks">
 	<div>
 		<h4>Github repositories:</h4>
+		<hr>
 		<a href="https://github.com/Zbeyer/zbeyer-2023" target="_blank">This Project</a>
 		<a href="https://github.com/Zbeyer/BearPoke" target="_blank">Don't Poke the Bear</a>
 		<a href="https://github.com/Zbeyer/node" target="_blank">Node</a>
 	</div>
 </template>
 
+<template name="ZbeyerSocial">
+	<div>
+		<h4>Social Profiles</h4>
+		<hr>
+		<a href="https://github.com/Zbeyer" target="_blank">Git Hub</a>
+		<a href="https://www.linkedin.com/in/zbeyer/" target="_blank">LinkedIn</a>
+		<a href="https://codepen.io/zbeyer-the-bold" target="_blank">Code Pen</a>
+	</div>
+</template>
+
 <template name="ZbeyerContact">
 	<div>
 		<h4>Contact Information</h4>
+		<hr>
 		<a href="tel:6084452470"><span>Phone: </span> (608)&nbsp;445&#8209;2470</a>
 		<a href="mailto:zacharydbeyer@gmail.com"><span> Email: </span>Zacharydbeyer@gmail.com</a>
-		<a href="https://github.com/Zbeyer"
-		   target="_blank">Git Hub</a>
-		<a href="https://www.linkedin.com/in/zbeyer/"
-		   target="_blank">Lined In</a>
-		<a href="https://codepen.io/zbeyer-the-bold"
-		   target="_blank">Code Pen</a>
 	</div>
 	<div>
 		<i>
-			I have a simple rule I let calls go to voice mail
-			(anything worth saying is worth leaving a voice mail)
+			I let calls go to voice mail (if it's worth saying is worth leaving a voice mail)
 		</i>
 	</div>
 </template>
@@ -38,6 +44,7 @@
 <template name="usefulLinks">
 	<div>
 		<h4>Useful Links</h4>
+		<hr>
 		<a href="https://www.siegemedia.com/contrast-ratio#white-on-hsl%28205%2C%20100%25%2C%2040%25%29" target="_blank">
 			Contrast Ratio</a>
 		<a href="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.0&showtechniques=111&currentsidebar=%23col_customize#top" target="_blank">
