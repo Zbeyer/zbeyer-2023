@@ -1,5 +1,7 @@
 <template name="mainBody">
 	<div class="content padding_16">
+		{{stripHTML '# Foo <div>bar</div>'}}
+
 		{{#if activeDoc}}
 			<h1>{{activeDoc.title}}</h1>
 
