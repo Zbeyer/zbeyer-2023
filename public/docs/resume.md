@@ -6,7 +6,13 @@ I’ve worked on world class native iOS and web applications.
 
 ## Software Wizard | Boom Learning | 2020-Present
 
-Returned to Boom (Omega Labs inc.) as a Sr. JS Develeloper, Figma Designer, Jira Task Manager, and Team leader.
+Returned to Boom (Omega Labs inc.) as a: 
+
+*   Sr. JS Develeloper
+*   Figma Designer
+*   Jira Task Manager
+*   Team leader
+*   Analytics specialist
 
 ## Mobile Engineer | McGraw-Hill Education | 2015-2020
 
