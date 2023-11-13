@@ -30,6 +30,14 @@ body {
 	padding: 1em;
 }
 
+.container {
+	border-radius: 8px;
+	border: 1px solid #C0C0C0;
+	cursor: pointer;
+	margin: 1em;
+	padding: 1em;
+}
+
 .no-decoration {
 	text-decoration: unset;
 	color: unset;
