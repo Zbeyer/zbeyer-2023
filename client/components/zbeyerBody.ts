@@ -47,6 +47,7 @@ const docs = [
 		type: 'html'
 	},
 	{ path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
+	{ path: 'docs/resume.md', title: 'Modern Resume'},
 	// { path: 'docs/helloWorld.html', title: 'Hello World'},
 	{ path: 'colorList.pdf', title: 'PDF File'},
 	{ path: 'bear.png', title: 'Bear Image'},
