@@ -40,17 +40,17 @@ const doNotRenderDocumentTypes = ['pdf', 'doc', 'docx', 'js', 'ts', 'json', 'md'
 const doNotRenderCodeForDocumentTypes = ['md', 'doc', 'docx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const renderImageTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const docs = [
-	// {path: 'docs/colors.json', title: 'Colors JSON'},
+	{ path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
+	{ path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
+	{ path: 'docs/resume.md', title: 'Modern Resume'},
+	{ path: 'colorList.pdf', title: 'PDF File'},
+	// { path: 'docs/helloWorld.html', title: 'Hello World'},
+	// { path: 'docs/colors.json', title: 'Colors JSON'},
 	{
 		path: 'docs/colors.html',
 		title: 'Colors',
 		type: 'html'
 	},
-	{ path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
-	{ path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
-	{ path: 'docs/resume.md', title: 'Modern Resume'},
-	// { path: 'docs/helloWorld.html', title: 'Hello World'},
-	{ path: 'colorList.pdf', title: 'PDF File'},
 	{ path: 'bear.png', title: 'Bear Image'}
 ];
 
