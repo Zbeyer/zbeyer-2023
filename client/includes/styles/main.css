@@ -38,11 +38,17 @@ body {
 	padding: 	0.25em;
 }
 
+header
+{
+	text-align: center;
+}
+
 header h1, .avatar {
 	display: inline-block;
-	margin: 0.5em;
+	margin: 0.25em;
 	vertical-align: middle;
 	font-size: 3.0em;
+	line-height: 1.5em;
 }
 
 .avatar {
