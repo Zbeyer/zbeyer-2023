@@ -30,6 +30,11 @@ body {
 	padding: 1em;
 }
 
+.content img {
+	min-width: 256px;
+	max-width: 100%;
+}
+
 .container {
 	border-radius: 5px;
 	border: 1px solid #C0C0C0;
