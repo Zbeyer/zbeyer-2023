@@ -35,12 +35,24 @@ body {
 	max-width: 100%;
 }
 
+.container a, .container p, .container span, .container h1, .container h2, .container h3, .container h4, .container h5, .container h6 {
+	padding: 0;
+	margin: 0.25em 0 0 0.25em;
+
+}
+
 .container {
 	border-radius: 5px;
 	border: 1px solid #C0C0C0;
 	cursor: pointer;
-	margin: 	0.5em;
+	margin: 	1.0em;
 	padding: 	0.25em;
+}
+
+.container:hover {
+	border: 1px solid var(--mainSecondary);
+	background-color: var(--mainSecondary);
+	color: var(--mainBG);
 }
 
 header
