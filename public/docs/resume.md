@@ -4,7 +4,7 @@ Who am I? I'm a developer with over seven years of native iOS software and over 
 
 ## Software Wizard | Boom Learning | 2020-Present
 
-Returned to Boom (Omega Labs inc.) as and continued wearing multiple hats as a: 
+Returned to Boom (Omega Labs inc.) and continued wearing multiple hats as a: 
 
 *   Sr. Javascript & Typescript Develeloper — developed code in highly leveraged educational platform. 
 *   Figma Designer — designed new features to meet complex buisness needs.
