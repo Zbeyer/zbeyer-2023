@@ -128,8 +128,9 @@ Template.mainBody.onCreated(function helloOnCreated() {
 		'violet'
 	];
 	this.steps = new ReactiveVar([
-		'colors',
 		'documents',
+		'towne of klock'
+		'colors',
 	]);
 	this.tokColors = new ReactiveVar(colorDocs);
 	this.colors = new ReactiveVar(colors);

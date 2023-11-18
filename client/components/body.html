@@ -14,8 +14,13 @@
 			</span>
 		</h3>
 
+		{{#if eq activeStep 'towne of klock'}}
+			<img src="TowneOfKlock/tok.jpg" alt="Town of clock logo"/>
+			<p>Towne Of Klock</p>
+		{{/if}}
 
 		{{#if eq activeStep 'colors'}}
+
 			{{#each colors}}
 				<div class="border border_{{this}}">
 					<div class="border border_{{this}}_2">
