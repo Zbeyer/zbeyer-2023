@@ -17,7 +17,7 @@ HUE 	COLOR
 ****/
 .border
 {
-	padding: 3px;
+	padding: 2px;
 	border-radius: 5px;
 }
 
@@ -43,7 +43,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(0, 0%, 20%), hsl(0, 0%, 50%));
 }.background_grey {
 	border: 1px solid hsl(0, 0%, 5%);
-	background-color: hsl(0, 0%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(0, 0%, 30%), hsl(0, 0%, 2.5%));
 	color: hsl(0, 0%, 98.0%);
 }
 
@@ -55,7 +55,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(355, 100%, 20%), hsl(355, 100%, 50%));
 }.background_red {
 	border: 1px solid hsl(355, 100%, 5%);
-	background-color: hsl(355, 100%, 2.5%);
+  	background: linear-gradient(to bottom right, hsl(355, 100%, 20%), hsl(355, 100%, 2.5%));
 	color: hsl(355, 100%, 98.0%);
 }
 
@@ -67,7 +67,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(25, 100%, 20%), hsl(25, 100%, 50%));
 }.background_orange {
 	border: 1px solid hsl(25, 100%, 5%);
-	background-color: hsl(25, 100%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(25, 100%, 20%), hsl(25, 100%, 2.5%));
 	color: hsl(25, 100%, 98.0%);
 }
 
@@ -79,7 +79,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(55, 100%, 20%), hsl(55, 100%, 50%));
 }.background_yellow {
 	border: 1px solid hsl(55, 100%, 5%);
-	background-color: hsl(55, 100%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(55, 100%, 20%), hsl(55, 100%, 2.5%));
 	color: hsl(55, 100%, 98.0%);
 }
 
@@ -91,7 +91,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(85, 100%, 20%), hsl(85, 100%, 50%));
 }.background_lime {
 	border: 1px solid hsl(85, 100%, 5%);
-	background-color: hsl(85, 100%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(85, 100%, 20%), hsl(85, 100%, 2.5%));
 	color: hsl(85, 100%, 98.0%);
 }
 
@@ -103,7 +103,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(115, 100%, 20%), hsl(115, 100%, 50%));
 }.background_green {
 	border: 1px solid hsl(115, 100%, 5%);
-	background-color: hsl(115, 100%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(115, 100%, 20%), hsl(115, 100%, 2.5%));
 	color: hsl(115, 100%, 98.0%);
 }
 
@@ -115,7 +115,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(145, 100%, 20%), hsl(145, 100%, 50%));
 }.background_turquoise {
 	border: 1px solid hsl(145, 100%, 5%);
-	background-color: hsl(145, 100%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(145, 100%, 20%), hsl(145, 100%, 2.5%));
 	color: hsl(145, 100%, 98.0%);
 }
 
@@ -127,7 +127,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(175, 100%, 20%), hsl(175, 100%, 50%));
 }.background_cyan {
 	border: 1px solid hsl(175, 100%, 5%);
-	background-color: hsl(175, 100%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(175, 100%, 20%), hsl(175, 100%, 2.5%));
 	color: hsl(175, 100%, 98.0%);
 }
 
@@ -139,7 +139,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(205, 100%, 20%), hsl(205, 100%, 50%));
 }.background_blue {
 	border: 1px solid hsl(205, 100%, 5%);
-	background-color: hsl(205, 100%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(205, 100%, 20%), hsl(205, 100%, 2.5%));
 	color: hsl(205, 100%, 98.0%);
 }
 
@@ -151,7 +151,7 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(235, 100%, 20%), hsl(235, 100%, 50%));
 }.background_indigo {
 	border: 1px solid hsl(235, 100%, 5%);
-	background-color: hsl(235, 100%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(235, 100%, 20%), hsl(235, 100%, 2.5%));
 	color: hsl(235, 100%, 98.0%);
 }
 
@@ -175,18 +175,6 @@ img.gem
 	background: linear-gradient(to bottom right, hsl(295, 100%, 20%), hsl(295, 100%, 50%));
 }.background_magenta, .background_violet {
 	border: 1px solid hsl(295, 100%, 5%);
-	background-color: hsl(295, 100%, 2.5%);
+	background: linear-gradient(to bottom right, hsl(295, 100%, 20%), hsl(295, 100%, 2.5%));
 	color: hsl(295, 100%, 98.0%);
-}
-
-/*					PINK				*/
-.border_pink {
-	background: linear-gradient(to bottom right, hsl(325, 100%, 50%), hsl(325, 100%, 30%));
-	margin: 1em;
-}.border_pink_2 {
-	background: linear-gradient(to bottom right, hsl(325, 100%, 20%), hsl(325, 100%, 50%));
-}.background_pink {
-	border: 1px solid hsl(325, 100%, 5%);
-	background-color: hsl(325, 100%, 2.5%);
-	color: hsl(325, 100%, 98.0%);
 }
