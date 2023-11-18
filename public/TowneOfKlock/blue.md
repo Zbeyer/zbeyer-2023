@@ -2,9 +2,19 @@
 
 Blue is a color.
 
-Steam Towne.
+## Steam Towne
 
-Factory Towne.
+A city where power is generated.
 
-Science Towne.
+## Factory Towne
+
+A city where things are made
+
+## Science Towne
+
+A city where things are studied.
+
+## Coast of The Abyss
+
+A vast beach that binds the oceananic sea to the land
 

@@ -2,9 +2,10 @@
 
 Orange is a color.
 
-Forsaken Towne.
+## Forsaken Towne
 
-Pits of Broken Ones.
+A city built on scrap.
 
-Grave of Fireflies
+## Pits of Broken Ones
 
+A mass grave where broken things are accumulated.
