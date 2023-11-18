@@ -10,16 +10,54 @@ interface DocumentInterface {
 	body?: string;
 }
 
-let addDocumentToSession = function (fileName: string) {
+interface ColorInterface {
+	color: string;
+	body?: string;
+}
+let getToKColors = function () {
+	const colors: object[] =
+	[
+		{
+			color: 'grey',
+		}, {
+			color: 'red',
+		}, {
+			color: 'orange'
+		}, {
+			color: 'yellow',
+		}, {
+			color: 'green',
+		}, {
+			color: 'blue',
+		}, {
+			color: 'indigo',
+		}, {
+			color: 'violet',
+		}
+	];
+
+	return colors;
+};
+
+let addDocumentToSession = function (fileName: string, instance?: any) {
 	let docName = 'document_' + fileName;
 	let doc = Session.get(docName);
+	if (!doc) {
+		fetch(fileName).then((resp) => resp.text()).then(function (data) {
+			doc = data;
+			Session.set(docName, doc);
+			// console.log("set doc %o", doc);
+		}).then(function () {
+			let now = (new Date()).getTime();
+			if (instance)
+			{
+				instance.lastFetch = now;
+				console.log("set lastFetch %o", now);
+			}
+			Session.set('lastFetch', now);
 
-	fetch(fileName).then((resp) => resp.text()).then(function (data) {
-		doc = data;
-		// doc = doc.replace(/\n/g, '<br/>');
-
-		Session.set(docName, doc);
-	});
+		});
+	}
 	return doc;
 };
 
@@ -66,6 +104,24 @@ let documentType = function (doc: DocumentInterface) {
 };
 
 Template.mainBody.onCreated(function helloOnCreated() {
+	const instance = this;
+	console.log("mainBody created");
+
+	let colorDocs: object[] = getToKColors();
+	colorDocs.forEach(function (obj: object)
+	{
+		let name = obj.color || '';
+		// console.log("name %o", name);
+		let path = 'TowneOfKlock/' + name + '.md';
+		obj.body = addDocumentToSession(path, instance);
+	});
+	docs.forEach(function (doc: DocumentInterface) {
+		let path = doc.path || '';
+		if (!doc.type) {
+			doc.type = doc.path.split('.').pop();
+		}
+		doc.body = addDocumentToSession(path, instance);
+	});
 	const colors: string[] = [
 		'grey',
 		'red',
@@ -80,17 +136,12 @@ Template.mainBody.onCreated(function helloOnCreated() {
 		'colors',
 		'documents',
 	]);
-	this.activeStep = new ReactiveVar(0);
+	this.tokColors = new ReactiveVar(colorDocs);
 	this.colors = new ReactiveVar(colors);
+
+	this.activeStep = new ReactiveVar(0);
 	this.docs = new ReactiveVar(docs);
 	this.activeDoc = new ReactiveVar(null);
-	docs.forEach(function (doc: DocumentInterface) {
-		let path = doc.path || '';
-		if (!doc.type) {
-			doc.type = doc.path.split('.').pop();
-		}
-		doc.body = addDocumentToSession(path) || '';
-	});
 });
 
 Template.mainBody.onRendered(function () {
@@ -100,6 +151,23 @@ Template.mainBody.onRendered(function () {
 Template.mainBody.helpers({
 	steps() {
 		return Template.instance().steps.get();
+	},
+	color(color: string = '') {
+		const instance = Template.instance();
+
+		let colors: ColorInterface[] = instance.tokColors.get();
+		let c: ColorInterface = colors.filter(function (obj) {
+			return obj.color == color;
+		})[0];
+		let body = c.body;
+		if (!body)
+		{
+			let path = 'TowneOfKlock/' + c.color + '.md';
+			body = addDocumentToSession(path, instance);
+			c.body = body;
+		}
+		console.log("color %o", c);
+		return body;
 	},
 	activeStep() {
 		let index = Template.instance().activeStep.get();
@@ -127,6 +195,9 @@ Template.mainBody.helpers({
 	},
 	colors() {
 		return Template.instance().colors.get();
+	},
+	tokColors() {
+		return Template.instance().tokColors.get();
 	},
 	captializeFirstLetter(name: string) {
 		name = name || '';
@@ -168,9 +239,9 @@ Template.mainBody.helpers({
 });
 
 Template.mainBody.events({
-	'click button': function (event, instance) {
-		console.log("button clicked");
-	},
+	// 'click button': function (event, instance) {
+	// 	console.log("button clicked");
+	// },
 	'click button.showGameButton': function (event, instance) {
 		instance.showGame.set(true);
 	},
@@ -184,7 +255,7 @@ Template.mainBody.events({
 		let document: DocumentInterface = {
 			title: title,
 			path: path,
-			body: addDocumentToSession(path)
+			body: addDocumentToSession(path, instance)
 		}
 		animateScrollingToTop();
 		instance.activeDoc.set(document);
