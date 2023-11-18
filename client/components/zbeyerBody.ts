@@ -49,13 +49,8 @@ let addDocumentToSession = function (fileName: string, instance?: any) {
 			// console.log("set doc %o", doc);
 		}).then(function () {
 			let now = (new Date()).getTime();
-			if (instance)
-			{
-				instance.lastFetch = now;
-				console.log("set lastFetch %o", now);
-			}
+			if (instance) { instance.lastFetch = now; }
 			Session.set('lastFetch', now);
-
 		});
 	}
 	return doc;
@@ -166,7 +161,6 @@ Template.mainBody.helpers({
 			body = addDocumentToSession(path, instance);
 			c.body = body;
 		}
-		console.log("color %o", c);
 		return body;
 	},
 	activeStep() {
