@@ -2,7 +2,6 @@ function stripHTML(s: string){
 	s = s.replace(/(<([^>]+)>)/ig, '');
 	return s;
 }
-Template.registerHelper('stripHTML', stripHTML)
 
 Meteor.startup(function(){
 	markdown.register('before',function(content){
@@ -18,3 +17,8 @@ Meteor.startup(function(){
 		console.log(content.data); //rendered html
 	});
 })
+
+Template.registerHelper('stripHTML', stripHTML);
+Template.registerHelper('eq', function(a,b){
+	return a == b;
+});

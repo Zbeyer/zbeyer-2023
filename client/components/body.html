@@ -1,51 +1,85 @@
 <template name="mainBody">
 	<div class="content padding_16">
-		{{#if activeDoc}}
-			{{#if isActiveDocMarkdown}}
-				<hr>
-				<section>
-					{{#markdown}}{{activeDoc.body}}{{/markdown}}
-				</section>
-				<hr>
-			{{/if}}
-			<h1>{{activeDoc.title}}</h1>
+		<button class="js-previous button-previous">
+			PREV
+		</button>
 
-			{{#unless shouldNotRenderDoc}}
-				<section>
-					{{{activeDoc.body}}}
-				</section>
-				<br/>
-			{{/unless}}
+		<button class="js-next button-next">
+			NEXT
+		</button>
 
-			{{#unless shouldNotRenderCode}}
-				<section>
-					<pre><code>{{activeDoc.body}}</code></pre>
-				</section>
-			{{/unless}}
+		<h3  class="center capitalize">
+			<span>
+				{{activeStep}}
+			</span>
+		</h3>
 
-			{{#if shouldRenderImage}}
-				<div style="padding: inherit; background: white">
-					<img src="./{{activeDoc.path}}" alt="{{activeDoc.alt}}">
+
+		{{#if eq activeStep 'colors'}}
+			{{#each colors}}
+				<div class="border border_{{this}}">
+					<div class="border border_{{this}}_2">
+						<div class="color background_{{this}}">
+							<h3>
+								<img src="gems/{{this}}.png" alt="Gem {{this}}" class="gem"/>
+								{{captializeFirstLetter this}}
+							</h3>
+							<p>
+								The quick brown fox jumps over the lazy dog.
+							</p>
+						</div>
+					</div>
 				</div>
-				<br/>
-				<div style="padding: inherit; background: black">
-					<img src="./{{activeDoc.path}}" alt="{{activeDoc.alt}}">
-				</div>
-				<a href="./{{activeDoc.path}}" target="_blank">View Full Size</a>
-			{{/if}}
-			<p>
-				<a href="./{{activeDoc.path}}" target="_blank">{{activeDoc.path}}</a>
-			</p>
-			<hr>
+			{{/each}}
 		{{/if}}
-		{{#each docs}}
-			<div class="js-readMore container" data-title="{{title}}" data-path="{{path}}">
-				<h4>{{title}}</h4>
-				<p>
-					<i>{{path}}</i>
-				</p>
-			</div>
-		{{/each}}
 
+		{{#if eq activeStep 'documents'}}
+			{{#if activeDoc}}
+				{{#if isActiveDocMarkdown}}
+					<hr>
+					<section>
+						{{#markdown}}{{activeDoc.body}}{{/markdown}}
+					</section>
+					<hr>
+				{{/if}}
+				<h1>{{activeDoc.title}}</h1>
+
+				{{#unless shouldNotRenderDoc}}
+					<section>
+						{{{activeDoc.body}}}
+					</section>
+					<br/>
+				{{/unless}}
+
+				{{#unless shouldNotRenderCode}}
+					<section>
+						<pre><code>{{activeDoc.body}}</code></pre>
+					</section>
+				{{/unless}}
+
+				{{#if shouldRenderImage}}
+					<div style="padding: inherit; background: white">
+						<img src="./{{activeDoc.path}}" alt="{{activeDoc.alt}}">
+					</div>
+					<br/>
+					<div style="padding: inherit; background: black">
+						<img src="./{{activeDoc.path}}" alt="{{activeDoc.alt}}">
+					</div>
+					<a href="./{{activeDoc.path}}" target="_blank">View Full Size</a>
+				{{/if}}
+				<p>
+					<a href="./{{activeDoc.path}}" target="_blank">{{activeDoc.path}}</a>
+				</p>
+				<hr>
+			{{/if}}
+			{{#each docs}}
+				<div class="js-readMore container" data-title="{{title}}" data-path="{{path}}">
+					<h4>{{title}}</h4>
+					<p>
+						<i>{{path}}</i>
+					</p>
+				</div>
+			{{/each}}
+		{{/if}}
 	</div>
 </template>

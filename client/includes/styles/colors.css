@@ -1,0 +1,192 @@
+/****
+COLORS
+HUE 	COLOR
+
+355 	Red
+25 		Orange
+55 		Yellow
+85 		Lime
+115 	Green
+145 	Turquoise
+175 	Cyan
+205 	Blue
+235 	Indigo
+265 	Purple
+295 	Magenta
+325 	Pink
+****/
+.border
+{
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.color
+{
+	padding: 0 0 0 16px;
+	border-radius: 3px;
+}
+
+img.gem
+{
+	display: inline-block;
+	height: 16px;
+	margin-right: 8px;
+	width: auto;
+}
+
+/*					GREY				*/
+.border_grey {
+	background: linear-gradient(to bottom right, hsl(0, 0%, 50%), hsl(0, 0%, 30%));
+	margin: 1em;
+}.border_grey_2 {
+	background: linear-gradient(to bottom right, hsl(0, 0%, 20%), hsl(0, 0%, 50%));
+}.background_grey {
+	border: 1px solid hsl(0, 0%, 5%);
+	background-color: hsl(0, 0%, 2.5%);
+	color: hsl(0, 0%, 98.0%);
+}
+
+/*					RED					*/
+.border_red {
+	background: linear-gradient(to bottom right, hsl(355, 100%, 50%), hsl(355, 100%, 30%));
+	margin: 1em;
+}.border_red_2 {
+	background: linear-gradient(to bottom right, hsl(355, 100%, 20%), hsl(355, 100%, 50%));
+}.background_red {
+	border: 1px solid hsl(355, 100%, 5%);
+	background-color: hsl(355, 100%, 2.5%);
+	color: hsl(355, 100%, 98.0%);
+}
+
+/*					ORANGE				*/
+.border_orange {
+	background: linear-gradient(to bottom right, hsl(25, 100%, 50%), hsl(25, 100%, 30%));
+	margin: 1em;
+}.border_orange_2 {
+	background: linear-gradient(to bottom right, hsl(25, 100%, 20%), hsl(25, 100%, 50%));
+}.background_orange {
+	border: 1px solid hsl(25, 100%, 5%);
+	background-color: hsl(25, 100%, 2.5%);
+	color: hsl(25, 100%, 98.0%);
+}
+
+/*					YELLOW				*/
+.border_yellow {
+	background: linear-gradient(to bottom right, hsl(55, 100%, 50%), hsl(55, 100%, 30%));
+	margin: 1em;
+}.border_yellow_2 {
+	background: linear-gradient(to bottom right, hsl(55, 100%, 20%), hsl(55, 100%, 50%));
+}.background_yellow {
+	border: 1px solid hsl(55, 100%, 5%);
+	background-color: hsl(55, 100%, 2.5%);
+	color: hsl(55, 100%, 98.0%);
+}
+
+/*					LIME				*/
+.border_lime {
+	background: linear-gradient(to bottom right, hsl(85, 100%, 50%), hsl(85, 100%, 30%));
+	margin: 1em;
+}.border_lime_2 {
+	background: linear-gradient(to bottom right, hsl(85, 100%, 20%), hsl(85, 100%, 50%));
+}.background_lime {
+	border: 1px solid hsl(85, 100%, 5%);
+	background-color: hsl(85, 100%, 2.5%);
+	color: hsl(85, 100%, 98.0%);
+}
+
+/*					GREEN				*/
+.border_green {
+	background: linear-gradient(to bottom right, hsl(115, 100%, 50%), hsl(115, 100%, 30%));
+	margin: 1em;
+}.border_green_2 {
+	background: linear-gradient(to bottom right, hsl(115, 100%, 20%), hsl(115, 100%, 50%));
+}.background_green {
+	border: 1px solid hsl(115, 100%, 5%);
+	background-color: hsl(115, 100%, 2.5%);
+	color: hsl(115, 100%, 98.0%);
+}
+
+/*					TURQUOISE			*/
+.border_turquoise {
+	background: linear-gradient(to bottom right, hsl(145, 100%, 50%), hsl(145, 100%, 30%));
+	margin: 1em;
+}.border_turquoise_2 {
+	background: linear-gradient(to bottom right, hsl(145, 100%, 20%), hsl(145, 100%, 50%));
+}.background_turquoise {
+	border: 1px solid hsl(145, 100%, 5%);
+	background-color: hsl(145, 100%, 2.5%);
+	color: hsl(145, 100%, 98.0%);
+}
+
+/*					CYAN				*/
+.border_cyan {
+	background: linear-gradient(to bottom right, hsl(175, 100%, 50%), hsl(175, 100%, 30%));
+	margin: 1em;
+}.border_cyan_2 {
+	background: linear-gradient(to bottom right, hsl(175, 100%, 20%), hsl(175, 100%, 50%));
+}.background_cyan {
+	border: 1px solid hsl(175, 100%, 5%);
+	background-color: hsl(175, 100%, 2.5%);
+	color: hsl(175, 100%, 98.0%);
+}
+
+/*					BLUE				*/
+.border_blue {
+	background: linear-gradient(to bottom right, hsl(205, 100%, 50%), hsl(205, 100%, 30%));
+	margin: 1em;
+}.border_blue_2 {
+	background: linear-gradient(to bottom right, hsl(205, 100%, 20%), hsl(205, 100%, 50%));
+}.background_blue {
+	border: 1px solid hsl(205, 100%, 5%);
+	background-color: hsl(205, 100%, 2.5%);
+	color: hsl(205, 100%, 98.0%);
+}
+
+/*					INDIGO				*/
+.border_indigo {
+	background: linear-gradient(to bottom right, hsl(235, 100%, 50%), hsl(235, 100%, 30%));
+	margin: 1em;
+}.border_indigo_2 {
+	background: linear-gradient(to bottom right, hsl(235, 100%, 20%), hsl(235, 100%, 50%));
+}.background_indigo {
+	border: 1px solid hsl(235, 100%, 5%);
+	background-color: hsl(235, 100%, 2.5%);
+	color: hsl(235, 100%, 98.0%);
+}
+
+/*					PURPLE				*/
+.border_purple {
+	background: linear-gradient(to bottom right, hsl(265, 100%, 50%), hsl(265, 100%, 30%));
+	margin: 1em;
+}.border_purple_2 {
+	background: linear-gradient(to bottom right, hsl(265, 100%, 20%), hsl(265, 100%, 50%));
+}.background_purple {
+	border: 1px solid hsl(265, 100%, 5%);
+	background-color: hsl(265, 100%, 2.5%);
+	color: hsl(265, 100%, 98.0%);
+}
+
+/*					MAGENTA				*/
+.border_magenta, .border_violet {
+	background: linear-gradient(to bottom right, hsl(295, 100%, 50%), hsl(295, 100%, 30%));
+	margin: 1em;
+}.border_magenta_2, .border_violet_2 {
+	background: linear-gradient(to bottom right, hsl(295, 100%, 20%), hsl(295, 100%, 50%));
+}.background_magenta, .background_violet {
+	border: 1px solid hsl(295, 100%, 5%);
+	background-color: hsl(295, 100%, 2.5%);
+	color: hsl(295, 100%, 98.0%);
+}
+
+/*					PINK				*/
+.border_pink {
+	background: linear-gradient(to bottom right, hsl(325, 100%, 50%), hsl(325, 100%, 30%));
+	margin: 1em;
+}.border_pink_2 {
+	background: linear-gradient(to bottom right, hsl(325, 100%, 20%), hsl(325, 100%, 50%));
+}.background_pink {
+	border: 1px solid hsl(325, 100%, 5%);
+	background-color: hsl(325, 100%, 2.5%);
+	color: hsl(325, 100%, 98.0%);
+}

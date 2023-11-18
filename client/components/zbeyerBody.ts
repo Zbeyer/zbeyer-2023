@@ -27,7 +27,9 @@ let animateScrollingToTop = function () {
 	const loop = 16;
 	let runScrollAnimation = setInterval(function () {
 		let scrollTo = scrollY - 64.0;
-		if(scrollTo < 0) { scrollTo = 0; }
+		if (scrollTo < 0) {
+			scrollTo = 0;
+		}
 		if (scrollTo <= 0) {
 			clearInterval(runScrollAnimation);
 		} else {
@@ -40,11 +42,11 @@ const doNotRenderDocumentTypes = ['pdf', 'doc', 'docx', 'js', 'ts', 'json', 'md'
 const doNotRenderCodeForDocumentTypes = ['md', 'doc', 'docx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const renderImageTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const docs = [
-	{ path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
-	{ path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
-	{ path: 'docs/resume.md', title: 'Modern Resume'},
-	{ path: 'colorList.pdf', title: 'PDF File'},
-	{ path: 'bmc_qr.jpg', title: 'Buy me Coffee'},
+	{path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
+	{path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
+	{path: 'docs/resume.md', title: 'Modern Resume'},
+	{path: 'colorList.pdf', title: 'PDF File'},
+	{path: 'bmc_qr.jpg', title: 'Buy me Coffee'},
 	// { path: 'docs/helloWorld.html', title: 'Hello World'},
 	// { path: 'docs/colors.json', title: 'Colors JSON'},
 	{
@@ -52,10 +54,10 @@ const docs = [
 		title: 'Colors',
 		type: 'html'
 	},
-	{ path: 'bear.png', title: 'Bear Image'}
+	{path: 'bear.png', title: 'Bear Image'}
 ];
 
-let isDocumentTypeInList = function(type: string, list: string[]) {
+let isDocumentTypeInList = function (type: string, list: string[]) {
 	return list.indexOf(type) >= 0;
 };
 
@@ -64,11 +66,22 @@ let documentType = function (doc: DocumentInterface) {
 };
 
 Template.mainBody.onCreated(function helloOnCreated() {
-	this.showGame = new ReactiveVar(false);
-	this.zbeyerStep = new ReactiveVar(0);
-	// this.colors = new ReactiveVar(colors());
-	// this.colorKeys = new ReactiveVar(['grey', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']);
-
+	const colors: string[] = [
+		'grey',
+		'red',
+		'orange',
+		'yellow',
+		'green',
+		'blue',
+		'indigo',
+		'violet'
+	];
+	this.steps = new ReactiveVar([
+		'colors',
+		'documents',
+	]);
+	this.activeStep = new ReactiveVar(0);
+	this.colors = new ReactiveVar(colors);
 	this.docs = new ReactiveVar(docs);
 	this.activeDoc = new ReactiveVar(null);
 	docs.forEach(function (doc: DocumentInterface) {
@@ -85,6 +98,14 @@ Template.mainBody.onRendered(function () {
 });
 
 Template.mainBody.helpers({
+	steps() {
+		return Template.instance().steps.get();
+	},
+	activeStep() {
+		let index = Template.instance().activeStep.get();
+		let steps = Template.instance().steps.get();
+		return steps[index];
+	},
 	showGame() {
 		return Template.instance().showGame.get();
 	},
@@ -96,15 +117,30 @@ Template.mainBody.helpers({
 	},
 	shouldNotRenderDoc() {
 		let doc = Template.instance().activeDoc.get();
-		if (!doc) { return true; }
+		if (!doc) {
+			return true;
+		}
 
 		let type = doc.type || documentType(doc);
 		type = type.toLowerCase();
 		return isDocumentTypeInList(type, doNotRenderDocumentTypes);
 	},
+	colors() {
+		return Template.instance().colors.get();
+	},
+	captializeFirstLetter(name: string) {
+		name = name || '';
+		const firstLetter = name.charAt(0);
+		const firstLetterCap = firstLetter.toUpperCase();
+		const remainingLetters = name.slice(1);
+		const capitalizedWord = firstLetterCap + remainingLetters;
+		return capitalizedWord;
+	},
 	shouldNotRenderCode() {
 		let doc = Template.instance().activeDoc.get();
-		if (!doc) { return true; }
+		if (!doc) {
+			return true;
+		}
 
 		let type = doc.type || documentType(doc);
 		type = type.toLowerCase();
@@ -112,7 +148,9 @@ Template.mainBody.helpers({
 	},
 	shouldRenderImage() {
 		let doc = Template.instance().activeDoc.get();
-		if (!doc) { return false; }
+		if (!doc) {
+			return false;
+		}
 
 		let type = doc.type || documentType(doc);
 		type = type.toLowerCase();
@@ -120,7 +158,9 @@ Template.mainBody.helpers({
 	},
 	isActiveDocMarkdown() {
 		let doc = Template.instance().activeDoc.get();
-		if (!doc) { return false; }
+		if (!doc) {
+			return false;
+		}
 		let type = doc.type || documentType(doc);
 		type = type.toLowerCase();
 		return type == 'md';
@@ -137,20 +177,6 @@ Template.mainBody.events({
 	'click button.hideGameButton': function (event, instance) {
 		instance.showGame.set(false);
 	},
-	'click button.reduceStep': function (event, instance) {
-		let step = instance.zbeyerStep.get();
-		step--;
-		Math.max(step, 0);
-		instance.zbeyerStep.set(step);
-	},
-	'click button.increaseStep': function (event, instance) {
-		let step = instance.zbeyerStep.get();
-		step++;
-		if (step > 3) {
-			step = 3;
-		}
-		instance.zbeyerStep.set(step);
-	},
 	'click .js-readMore': function (event, instance) {
 		let path = event.currentTarget.getAttribute("data-path");
 		let title = event.currentTarget.getAttribute("data-title");
@@ -162,5 +188,22 @@ Template.mainBody.events({
 		}
 		animateScrollingToTop();
 		instance.activeDoc.set(document);
-	}
+	},
+	'click .js-previous': function (event, instance) {
+		let index = instance.activeStep.get();
+		index--;
+		if (index < 0) {
+			index = 0;
+		}
+		instance.activeStep.set(index);
+	},
+	'click .js-next': function (event, instance) {
+		let index = instance.activeStep.get();
+		let steps = instance.steps.get();
+		index++;
+		if (index >= steps.length) {
+			index = steps.length - 1;
+		}
+		instance.activeStep.set(index);
+	},
 });
