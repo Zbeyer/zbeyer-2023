@@ -8,19 +8,20 @@
 			NEXT
 		</button>
 
-		<h3  class="center capitalize">
+		<h3 class="center capitalize">
 			<span>
 				{{activeStep}}
 			</span>
 		</h3>
 
 		{{#if eq activeStep 'towne of klock'}}
-			<img src="TowneOfKlock/tok.jpg" alt="Town of clock logo"/>
-			<p>Towne Of Klock</p>
+			<div class="center">
+				<img src="TowneOfKlock/tok.jpg" alt="Town of clock logo"/>
+				<p>Towne Of Klock</p>
+			</div>
 		{{/if}}
 
 		{{#if eq activeStep 'colors'}}
-
 			{{#each colors}}
 				<div class="border border_{{this}}">
 					<div class="border border_{{this}}_2">
@@ -42,7 +43,7 @@
 			{{#if activeDoc}}
 				{{#if isActiveDocMarkdown}}
 					<hr>
-					<section>
+					<section class="document-rendered">
 						{{#markdown}}{{activeDoc.body}}{{/markdown}}
 					</section>
 					<hr>
@@ -50,18 +51,20 @@
 				<h1>{{activeDoc.title}}</h1>
 
 				{{#unless shouldNotRenderDoc}}
-					<section>0
+					<section class="document-rendered">
+						{{{activeDoc.body}}}
 					</section>
 					<br/>
 				{{/unless}}
 
 				{{#unless shouldNotRenderCode}}
-					<section>
+					<section class="document-rendered">
 						<pre><code>{{activeDoc.body}}</code></pre>
 					</section>
 				{{/unless}}
 
 				{{#if shouldRenderImage}}
+				<section class="document-rendered">
 					<div style="padding: inherit; background: white">
 						<img src="./{{activeDoc.path}}" alt="{{activeDoc.alt}}">
 					</div>
@@ -70,20 +73,24 @@
 						<img src="./{{activeDoc.path}}" alt="{{activeDoc.alt}}">
 					</div>
 					<a href="./{{activeDoc.path}}" target="_blank">View Full Size</a>
+				</section>
 				{{/if}}
 				<p>
 					<a href="./{{activeDoc.path}}" target="_blank">{{activeDoc.path}}</a>
 				</p>
 				<hr>
+
 			{{/if}}
-			{{#each docs}}
-				<div class="js-readMore container" data-title="{{title}}" data-path="{{path}}">
-					<h4>{{title}}</h4>
-					<p>
-						<i>{{path}}</i>
-					</p>
-				</div>
-			{{/each}}
+			<section class="document-list">
+				{{#each docs}}
+					<div class="js-readMore container document" data-title="{{title}}" data-path="{{path}}">
+						<h4>{{title}}</h4>
+						<p>
+							<i>{{path}}</i>
+						</p>
+					</div>
+				{{/each}}
+			</section>
 		{{/if}}
 	</div>
 </template>

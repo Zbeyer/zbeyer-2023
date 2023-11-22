@@ -1,0 +1,32 @@
+.document-list
+{
+	max-width: 1300px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 0;
+	background-color: transparent;
+}
+
+.document-list .container
+{
+	display: inline-block;
+	width: 100%;
+	max-width: 320px;
+	margin: 4px 4px;
+}
+
+.document-list .container{
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	cursor: pointer;
+	margin: 	1.0em;
+	padding: 	0.25em;
+}
+
+.container:hover {
+	border: 1px solid var(--mainSecondary);
+	background-color: var(--mainSecondary);
+	color: var(--mainBG);
+}
