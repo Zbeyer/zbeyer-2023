@@ -164,7 +164,7 @@ export default class MainGame extends Phaser.Scene
 		let shared = BearPoke.shared();
 		if (shared.isGameOver) return;
 
-		const timerLifeTime: number = IsDebug ? 18_000 : 1_800;
+		const timerLifeTime: number = IsDebug ? 18_000 : 2_600;
 
 		let now = new Date().getTime();
 		let lastPoke = BearPoke.shared().lastPoke || now;

@@ -25,7 +25,7 @@ class BearPoke //implements BearPokeInterface
 
 	constructor()
 	{
-		this.maxHearts = 3;
+		this.maxHearts = 5;
 		this.hearts = this.maxHearts;
 		this.pokes = 0;
 		this.bearPokes = 0;
@@ -34,7 +34,7 @@ class BearPoke //implements BearPokeInterface
 		this.lastPoke = (new Date()).getTime();
 		this.startTime = this.lastPoke;
 		this.stoppedTime = 0;
-		this.drawLimit = 2;
+		this.drawLimit = 3;
 		this.animals = [];
 
 		this.isGameOver = false;
