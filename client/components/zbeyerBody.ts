@@ -57,7 +57,7 @@ let addDocumentToSession = function (fileName: string, instance?: any) {
 };
 
 let animateScrollingToTop = function () {
-	const loop = 16;
+	const loop = 8;
 	let runScrollAnimation = setInterval(function () {
 		let scrollTo = scrollY - 64.0;
 		if (scrollTo < 0) {
@@ -129,6 +129,7 @@ Template.mainBody.onCreated(function helloOnCreated() {
 	];
 	this.steps = new ReactiveVar([
 		'documents',
+		'BearPoke',
 		'towne of klock',
 		'colors',
 	]);

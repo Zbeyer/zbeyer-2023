@@ -21,6 +21,10 @@
 			</div>
 		{{/if}}
 
+		{{#if eq activeStep 'BearPoke'}}
+			{{> BearPokeGame}}
+		{{/if}}
+
 		{{#if eq activeStep 'colors'}}
 			{{#each colors}}
 				<div class="border border_{{this}}">
@@ -93,4 +97,23 @@
 			</section>
 		{{/if}}
 	</div>
+	<div class="content padding_16">
+	<button class="js-previous button-previous">
+			PREV
+		</button>
+
+		<button class="js-next button-next">
+			NEXT
+		</button>
+
+		<h3 class="center capitalize">
+			<span>
+				{{activeStep}}
+			</span>
+		</h3>
+	</div>
+</template>
+
+<template name="BearPokeGame">
+	<h1>Don't Poke The Bear</h1>
 </template>
