@@ -75,19 +75,15 @@ const doNotRenderDocumentTypes = ['pdf', 'doc', 'docx', 'js', 'ts', 'json', 'md'
 const doNotRenderCodeForDocumentTypes = ['md', 'doc', 'docx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const renderImageTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const docs = [
-	{path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
 	{path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
-	{path: 'docs/resume.md', title: 'Modern Resume'},
-	{path: 'colorList.pdf', title: 'PDF File'},
-	{path: 'bmc_qr.jpg', title: 'Buy me Coffee'},
-	// { path: 'docs/helloWorld.html', title: 'Hello World'},
-	// { path: 'docs/colors.json', title: 'Colors JSON'},
-	{
-		path: 'docs/colors.html',
-		title: 'Colors',
-		type: 'html'
-	},
 	{path: 'bear.png', title: 'Bear Image'}
+	{path: 'bmc_qr.jpg', title: 'Buy me Coffee QR Image'},
+	{path: 'docs/colors.html', title: 'Colors', type: 'html'},
+	{path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
+	{path: 'docs/resume.md', title: 'Modern Resume'},
+	{path: 'docs/fibWhileLoop.js', title: 'NodeJS Fibonacci While Loop'},
+	{path: 'docs/reversingALinkedList.js', title: 'NodeJS Reversing a Linked List'},
+	{path: 'colorList.pdf', title: 'PDF File'},
 ];
 
 let isDocumentTypeInList = function (type: string, list: string[]) {
