@@ -22,3 +22,10 @@ Template.registerHelper('stripHTML', stripHTML);
 Template.registerHelper('eq', function(a,b){
 	return a == b;
 });
+
+Template.registerHelper('getSeeion', function(key: string){
+	return Session.get(key);
+};
+Template.registerHelper('setSession', function(key: string, value: any){
+	return Session.set(key, value);
+};

@@ -96,7 +96,11 @@ let documentType = function (doc: DocumentInterface) {
 
 Template.mainBody.onCreated(function helloOnCreated() {
 	const instance = this;
-	console.log("mainBody created");
+
+	Session.set('bear_timer', 3_000);
+	Session.set('bear_max_animals', 3);
+	Session.set('bear_max_hearts', 7);
+
 
 	let colorDocs: object[] = getToKColors();
 	colorDocs.forEach(function (obj: object)

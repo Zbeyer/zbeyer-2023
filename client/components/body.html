@@ -116,4 +116,20 @@
 
 <template name="BearPokeGame">
 	<h1>Don't Poke The Bear</h1>
+<p>
+	<b>Timer: </b>
+	<input type="range" min="500" max="50000"
+		   value="{{getSeeion "bear_timer"}}" class="slider js-slider" data-key="bear_timer">
+	{{getSeeion "bear_timer"}}
+</p><p>
+	<b>Animals: </b>
+	<input type="range" min="1" max="5"
+		   value="{{getSeeion "bear_max_animals"}}" class="slider js-slider" data-key="bear_max_animals">
+	{{getSeeion "bear_max_animals"}}
+</p><p>
+	<b>Hearts: </b>
+	<input type="range" min="1" max="9"
+		   value="{{getSeeion "bear_max_hearts"}}" class="slider js-slider" data-key="bear_max_hearts">
+	{{getSeeion "bear_max_hearts"}}
+</p>
 </template>
