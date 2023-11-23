@@ -76,7 +76,8 @@ const doNotRenderCodeForDocumentTypes = ['md', 'doc', 'docx', 'pdf', 'jpg', 'jpe
 const renderImageTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const docs = [
 	{path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
-	{path: 'bear.png', title: 'Bear Image'}
+	{path: 'accessibility/main.md', title: 'Accessibility Notes'},
+	{path: 'bear.png', title: 'Bear Image'},
 	{path: 'bmc_qr.jpg', title: 'Buy me Coffee QR Image'},
 	{path: 'docs/colors.html', title: 'Colors', type: 'html'},
 	{path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
