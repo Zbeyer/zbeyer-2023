@@ -14,8 +14,6 @@ Voluntary Product Accessibility Template (VPAT) is a template for describing how
 
 Another common acronym is ACR. ACR is a report that explains how your app follows a VPAT. The VPAT is a document used to create an ACR.
 
-
-
 **Versions of WCAG**: 2.0, 2.1, 2.2 (3.0 expected in 2026)
 
 **Level of WCAG Compliance** A, AA, or AAA  (AAA is includes AA. AA includes A)
@@ -26,3 +24,14 @@ Another common acronym is ACR. ACR is a report that explains how your app follow
 * HTML, MS Word, or Adobe PDF
 **Publication: How will the ACR be made available?**
 * Viewable from website, Download from website, or Email upon request
+
+### Tools
+
+
+[Contrast Ratio](https://www.siegemedia.com/contrast-ratio#white-on-hsl%28205%2C%20100%25%2C%2040%25%29)
+
+[Color Service](https://www.oss-usa.com/color-check-ada-image-compliance)
+
+
+
+[](https://color.a11y.com/?wc3)
