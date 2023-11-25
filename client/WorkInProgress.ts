@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-import SlideMatch from './games/sm';
+import {SlideMatch} from './games/games';
 
 Template.workInProgress.onCreated(function () {
 	SlideMatch.newGame();
