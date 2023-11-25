@@ -1,5 +1,7 @@
 import { Session } from 'meteor/session';
 import 'phaser';
+import BootScene from "./Shared Scenes/boot";
+import PreloaderScene from "./Shared Scenes/preload";
 
 export default class Game
 {
@@ -31,7 +33,6 @@ export default class Game
 			g = new Game();
 			Session.set("Game_Shared", g);
 		}
-
 		return g;
 	}
 
@@ -45,7 +46,9 @@ export default class Game
 		let game: Phaser.Game 	= g.game;
 		if (!game) game 		= new Phaser.Game(config);
 		g.game = game;
-
+		game.scene.add('Boot', BootScene);
+		game.scene.add('Preloader', PreloaderScene);
+		game.scene.start('Boot');
 		console.log("newGame %o", g);
 		return g;
 	}
