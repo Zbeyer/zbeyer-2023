@@ -1,3 +1,5 @@
+## Idle Game
+
 Game generates items every second
 
 Upgrades allows the user to generate more items

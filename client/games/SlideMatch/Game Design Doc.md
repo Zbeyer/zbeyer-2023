@@ -1,3 +1,5 @@
+## Slide Match
+
 Each time the user slides a new item is created
 
 A slide pushes items on the board as far as it can go in the direction of the slide (until it encounters another item that cannot move OR a wall)

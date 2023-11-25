@@ -1,3 +1,5 @@
+## Slot Spin
+
 User triggers a spin
 
 Spin generates several items and consumes a token

@@ -1,3 +1,5 @@
+## Match Three
+
 Items fall from the top to ensure the board is always full
 
 If items ever reach 3 or more a match has been made
