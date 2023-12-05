@@ -7,14 +7,8 @@ export default {
 	},
 	scale: {
 		mode: Phaser.Scale.ScaleModes.FIT,
-		height: 640,
-		width: 640,
-	},
-	callbacks: {
-		postBoot: () => {
-			console.log('postBoot callback');
-			// window.sizeChanged();
-		},
+		height: 768,
+		width: 1024,
 	},
 	audio: {
 		disableWebAudio: false,

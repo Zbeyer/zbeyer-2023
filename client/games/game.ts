@@ -17,8 +17,8 @@ export default class Game
 			},
 			scale: {
 				mode: Phaser.Scale.ScaleModes.FIT,
-				height: 640,
-				width: 640,
+				height: 768,
+				width: 1024,
 			},
 			audio: {
 				disableWebAudio: false,
