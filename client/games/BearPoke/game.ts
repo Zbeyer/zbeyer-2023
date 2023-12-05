@@ -1,11 +1,11 @@
 import 'phaser';
 import GameConfig from './gameConfig'
-import PreloaderScene from "./scenes/preloader";
-import BootScene from "./scenes/boot";
+import PreloaderScene from "../Shared Scenes/preload";
+import BootScene from "../Shared Scenes/boot";
 import MainMenu from "./scenes/mainMenu";
 import MainGame from "./scenes/mainGame";
 import GameOver from "./scenes/gameOver";
-import Credits from "./scenes/credits";
+import Credits from "../Shared Scenes/credits";
 import QuitScreen from "./scenes/quit";
 class BearPokeGame
 {
