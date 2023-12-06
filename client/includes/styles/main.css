@@ -17,6 +17,11 @@ body {
 
 	line-height: 1.5em;
 	color: var(--mainFG);
+}
+
+.main
+{
+	display: block;
 	background-color: var(--mainBG);
 }
 

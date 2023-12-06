@@ -5,12 +5,14 @@
 </head>
 
 <body>
-{{> zbeyerHeader}}
-{{# mainBody}}
-	{{> biography}}
-{{/ mainBody}}
-{{> zbeyerFooter}}
-{{! workInProgress}}
+	<div class="main">
+		{{> zbeyerHeader}}
+		{{# mainBody}}
+			{{> biography}}
+		{{/ mainBody}}
+		{{> zbeyerFooter}}
+		{{! workInProgress}}
+	</div>
 </body>
 
 <Template name="main">
