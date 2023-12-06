@@ -1,29 +1,36 @@
 # Zachary Beyer
 
-Who am I? I'm a developer with over seven years of native iOS and over four years of JavaScript/Typescript professional software development experience. I’ve worked on world class applications. I've made games and enterprise applications.
+Who am I? I'm a developer with over seven years of native iOS and over four years of JavaScript / Typescript professional software development experience. I’ve worked on world class applications. I've made games and enterprise applications.
 
 ## Software Wizard | Boom Learning | 2020-Present
 
-Returned to Boom (Omega Labs inc.) and continued wearing multiple hats. I was a 
+Returned to Boom (Omega Labs inc.) and continued wearing multiple hats. 
 
-*   Sr. javascript & typescript Developer. Developed code on a highly leveraged educational platform. 
-*   Figma designer. Designed new features to meet complex buisness needs.
-*   Jira task manager. Kept track of tickets and kept the project on task and in alignment with buisness goals.
-*   Devops observer. Watched *meteor* load balancer and met frequently with the CTO to discuss performance problems.
-*   Database architect. Monitored iops, performance, and operations on MongoDB cluster.
-*   Team leader. Managed a group of javascript developers working together on an ever evolving application.
-*   Analytics specialist. Made GA4 give meaningful report data. Met with marketing to improve events over time.
-*   Accessibility guru. Found compliance violations accoding to 508, EN 301 549, and W3C/WAI WCAG requirements. Kept the app in line with international accessibility guidelines.
+**Sr. JavaScript & TypeScript Developer** Developed code on highly leveraged educational platform. 
 
-Since I was rehired during the Covid lockdown, I performed these duties remotely. Since we followed the k-12 school year, I had to be ready to pounce during peak back to school seasons.
+**Figma Designer** Designed new features to meet complex buisness needs.
+
+**Jira Task Manager** Kept track of tickets and kept the project on task and in alignment with buisness goals.
+
+**Devops Observe** Watched *meteor* load balancer and met frequently with the CTO to discuss performance problems.
+
+**Database Architect** Monitored iops, performance, and operations on MongoDB cluster.
+
+**Team Leader** Managed a group of javascript developers working together on an ever evolving application.
+
+**Analytics Specialist** Made GA4 give meaningful report data. Met with marketing to improve events over time.
+
+**Accessibility Guru** Found compliance violations accoding to 508, EN 301 549, and W3C/WAI WCAG requirements. Changed app when violations were found. Kept the app in line with international accessibility guidelines.
+
+**Remote Worker** Since I was rehired during the Covid lockdown, I performed these duties remotely. Since we followed the k-12 school year, I had to be ready to pounce during peak back to school seasons.
 
 ## Mobile Engineer | McGraw-Hill Education | 2015-2020
 
-Worked independently for three years designing and developing k-12 **ConnectED** app for iPhone  (*objective-c*). Simultaneously maintained the legacy **ConnectED** iPad application  (*objective-c*). Met with independent service vendor to integrate their code into the platform. Managed iOS release deployments for both iOS projects.
+**Self Starter** Worked independently for three years designing and developing k-12 **ConnectED** app for iPhone  (*objective-c*). Simultaneously maintained the legacy **ConnectED** iPad application  (*objective-c*). Met with independent service vendors (ISVs) to integrate their code into the platform. Managed iOS release deployments for both iOS projects.
 
-Developer on team building Higher education **ReadAnywhere** app on iOS (*Swift*). Assisted UI development on the Android platform (*Java*). Wrote a varity of features from bubbling errors up from lower environments to absorbing color changes with minimal developer work. Took the reins on feature support as contractors rolled off.
+**Team Player** Developer on team building Higher education **ReadAnywhere** app on iOS (*Swift*). Assisted UI development on the Android platform (*Java*). Wrote a varity of features from bubbling errors up from lower environments to absorbing color changes with minimal developer work. Took the reins on feature support as contractors rolled off.
 
-Aided the larger team by writing a variety of shell tools for workspace and automation support. Used Jenkins to manage the automated test and build processes.
+**Bash Master** Aided the larger team by writing a variety of shell tools for workspace and automation support. Used Jenkins to manage the automated test and build processes.
 
 ## Applications Developer | Holland America Line | 2014-2015
 
