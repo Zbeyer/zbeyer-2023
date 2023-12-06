@@ -26,7 +26,7 @@
 }
 
 .container:hover {
-	border: 1px solid var(--mainSecondary);
-	background-color: var(--mainSecondary);
+	border: 1px solid var(--mainFG);
+	background-color: var(--mainFG);
 	color: var(--mainBG);
 }
