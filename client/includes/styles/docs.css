@@ -1,9 +1,12 @@
 .document-list
 {
-	max-width: 1300px;
+	max-width: 1086px;
+
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: left;
+	flex-direction: row;
+
 	margin: 0 auto;
 	padding: 0;
 	background-color: transparent;
