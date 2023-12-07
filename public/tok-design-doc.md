@@ -17,10 +17,6 @@ Player's can expand their space by planting tiles.
 
 Tiles may hold a single crop, mob (non player character), or player character
 
- 
-
-
-
 
 
 ![tokcolorcss](./tok-design-doc-images/tokcolorcss.jpg)
