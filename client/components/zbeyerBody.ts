@@ -84,7 +84,7 @@ const docs = [
 	{path: 'docs/resume.md', title: 'Modern Resume'},
 	{path: 'docs/fibWhileLoop.js', title: 'NodeJS Fibonacci While Loop'},
 	{path: 'docs/reversingALinkedList.js', title: 'NodeJS Reversing a Linked List'},
-	{path: 'colorList.pdf', title: 'PDF File'},
+	{path: 'tok-design-doc.md', title: 'Towne of Klock Design Doc'},
 ];
 
 let isDocumentTypeInList = function (type: string, list: string[]) {
