@@ -81,7 +81,7 @@ const docs = [
 	{path: 'bmc_qr.jpg', title: 'Buy me Coffee QR Image'},
 	{path: 'docs/colors.html', title: 'Colors', type: 'html'},
 	{path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
-	{path: 'docs/Design Patterns.md', title: 'Design Patterns'},
+	// {path: 'docs/Design Patterns.md', title: 'Design Patterns'},
 	{path: 'docs/resume.md', title: 'Modern Resume'},
 	{path: 'docs/fibWhileLoop.js', title: 'NodeJS Fibonacci While Loop'},
 	{path: 'docs/reversingALinkedList.js', title: 'NodeJS Reversing a Linked List'},
