@@ -1,10 +1,10 @@
 # Zachary Beyer
 
-Who am I? I'm a developer with over seven years of native iOS and over four years of JavaScript / Typescript professional software development experience. I’ve worked on world class applications. I've made games and enterprise applications.
+Who am I? I'm a developer with over a decade of professional software development experience. Over seven years of native iOS (Objective-C & Swift) and over four years of web (JavaScript / Typescript). I’ve worked on world class applications. I've made games and enterprise applications.
 
 ## Software Wizard | Boom Learning | 2020-Present
 
-Returned to Boom (Omega Labs inc.) and continued wearing multiple hats. 
+Returned to Boom Learning (Omega Labs inc.) and continued wearing many hats.
 
 **Sr. JavaScript & TypeScript Developer** Developed code on highly leveraged educational platform. 
 
@@ -12,17 +12,17 @@ Returned to Boom (Omega Labs inc.) and continued wearing multiple hats.
 
 **Jira Task Manager** Kept track of tickets and kept the project on task and in alignment with buisness goals.
 
-**Devops Observe** Watched *meteor* load balancer and met frequently with the CTO to discuss performance problems.
+**Devops Observe** Watched *meteor* load balancer and met frequently with the CTO to discuss performance problems and solutions.
 
-**Database Architect** Monitored iops, performance, and operations on MongoDB cluster.
+**Database Architect** Monitored iops, read / writes, and performance on MongoDB cluster.
 
-**Team Leader** Managed a group of javascript developers working together on an ever evolving application.
+**Team Leader** Managed a group of developers working together on an ever evolving application.
 
-**Analytics Specialist** Made GA4 give meaningful report data. Met with marketing to improve events over time.
+**Analytics Specialist** Made GA4 give meaningful report data. Met with marketing to improve events.
 
-**Accessibility Guru** Found compliance violations accoding to 508, EN 301 549, and W3C/WAI WCAG requirements. Changed app when violations were found. Kept the app in line with international accessibility guidelines.
+**Accessibility Guru** Found, flagged, and fixed compliance violations accoding to 508, EN 301 549, and W3C/WAI WCAG requirements. Kept the app in line with accessibility guidelines.
 
-**Remote Worker** Since I was rehired during the Covid lockdown, I performed these duties remotely. Since we followed the k-12 school year, I had to be ready to pounce during peak back to school seasons.
+**Remote Worker** Since I was rehired during the Covid lockdown, I performed these duties remotely. Since we followed the k-12 school year, I had to be ready to pounce during peak back to school seasons (Autumn & Winter: Back to school semesters, spring school renew season, summer feature releases).
 
 ## Mobile Engineer | McGraw-Hill Education | 2015-2020
 
@@ -43,3 +43,7 @@ Front-end web developer. Focused on delivering revised *Secondary Booking Flow* 
 Startup brought me onboard to build k-12 experiences. Designed and developed with common-core requirements. Wore many hats from design through development and deployment. 
 
 Built out core game logic for scoring in **Mathtopia** suite as well as level and pacing tools. Designed effects, sound, art, and sequel game modules, like Fractions.
+
+### Hobbies
+
+When I'm not working I build out my website (https://zbeyer.com/) or make games (https://zbeyer.itch.io/)
