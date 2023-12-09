@@ -75,17 +75,18 @@ const doNotRenderDocumentTypes = ['pdf', 'doc', 'docx', 'js', 'ts', 'json', 'md'
 const doNotRenderCodeForDocumentTypes = ['md', 'doc', 'docx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const renderImageTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'ico'];
 const docs = [
-	{path: 'docs/Zachary Beyer-2019-resume-one page.docx', title: '2019 Resume'},
-	{path: 'accessibility/main.md', title: 'Accessibility Notes'},
-	{path: 'bear.png', title: 'Bear Image'},
-	{path: 'bmc_qr.jpg', title: 'Buy me Coffee QR Image'},
-	{path: 'docs/colors.html', title: 'Colors', type: 'html'},
-	{path: 'docs/howtosetupmymac.md', title: 'Mac Setup'},
+	{path: 'docs/Zachary Beyer-2019-resume-one page.docx',		title: '2019 Resume'},
+	{path: 'accessibility/main.md',								title: 'Accessibility Notes'},
+	{path: 'bear.png', 											title: 'Bear Image'},
+	{path: 'bmc_qr.jpg', 										title: 'Buy me Coffee QR Image'},
+	{path: 'docs/colors.html',									title: 'Colors', type: 'html'},
+	{path: 'docs/gtd.md', 										title: 'Getting Things Done (GTD)'},
+	{path: 'docs/howtosetupmymac.md', 							title: 'Mac Setup'},
 	// {path: 'docs/Design Patterns.md', title: 'Design Patterns'},
-	{path: 'docs/resume.md', title: 'Modern Resume'},
-	{path: 'docs/fibWhileLoop.js', title: 'NodeJS Fibonacci While Loop'},
-	{path: 'docs/reversingALinkedList.js', title: 'NodeJS Reversing a Linked List'},
-	{path: 'tok-design-doc.md', title: 'Towne of Klock Design Doc'},
+	{path: 'docs/resume.md', 									title: 'Modern Resume'},
+	{path: 'docs/fibWhileLoop.js', 								title: 'NodeJS Fibonacci While Loop'},
+	{path: 'docs/reversingALinkedList.js', 						title: 'NodeJS Reversing a Linked List'},
+	{path: 'tok-design-doc.md', 								title: 'Towne of Klock Design Doc'},
 ];
 
 let isDocumentTypeInList = function (type: string, list: string[]) {
